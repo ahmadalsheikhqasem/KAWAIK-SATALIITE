@@ -1,0 +1,290 @@
+/* 1. إعدادات التصميم العامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* تمرير ناعم عند الضغط على الروابط */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+    background-color: #f4f4f4;
+}
+
+/* 2. شريط التنقل (Navbar) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar .logo img {
+    height: 60px;
+    border-radius: 5px;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.navbar .menu li a:hover {
+    color: #ff6600;
+}
+
+/* 3. الواجهة الرئيسية (Hero Section) */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('img/background.jpeg'); /* تأكد من المسار */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* تعتيم الخلفية لبروز النص */
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* الأزرار في الواجهة */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:first-child { /* زر واتساب */
+    background-color: #ff6600;
+    color: white;
+}
+
+.btn-outline { /* زر معرض الأعمال */
+    background-color: transparent;
+    border: 2px solid #ff6600;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,102,0,0.4);
+}
+
+/* 4. الأقسام العامة */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.gray-bg {
+    background-color: #ececec;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ff6600;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 5. معرض الصور (Gallery Grid) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 102, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+}
+
+/* 6. التذييل (Footer) */
+footer {
+    background: #111;
+    color: #777;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #ff6600;
+}
+
+/* 7. التوافق مع الشاشات الصغيرة (Mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar .menu {
+        margin-top: 10px;
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+/* تنسيق الزر الدائري العائم */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 30px; /* المسافة من الأسفل */
+    left: 30px;   /* المسافة من اليسار */
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.circle-btn {
+    width: 90px;
+    height: 90px;
+    background-color: #25d366; /* لون واتساب الأخضر أو استخدم #ff6600 ليتماشى مع شعارك */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite; /* تأثير النبض لجذب الانتباه */
+}
+
+.circle-btn span {
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.circle-btn:hover {
+    transform: scale(1.1); /* تكبير بسيط عند التمرير */
+    background-color: #128c7e;
+}
+
+/* حركة النبض */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* إخفاء الزر في الشاشات الصغيرة جداً إذا كان يغطي المحتوى (اختياري) */
+@media (max-width: 480px) {
+    .circle-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 11px;
+    }
+}
