@@ -1,4 +1,4 @@
-/* 1. إعدادات التصميم العامة */
+/* --- إعدادات أساسية --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,95 +6,73 @@
 }
 
 html {
-    scroll-behavior: smooth; /* تمرير ناعم عند الضغط على الروابط */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background-color: #fff;
     color: #333;
-    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
-    background-color: #f4f4f4;
+    direction: rtl;
+    text-align: center;
 }
 
-/* 2. شريط التنقل (Navbar) */
+/* --- الهيدر الأسود --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #000;
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.navbar .logo img {
-    height: 60px;
-    border-radius: 5px;
+.logo img {
+    height: 50px;
 }
 
-.navbar .menu {
-    list-style: none;
+.menu {
     display: flex;
+    list-style: none;
     gap: 20px;
 }
 
-.navbar .menu li a {
+.menu a {
+    color: #fff;
     text-decoration: none;
-    color: white;
     font-weight: bold;
-    font-size: 1rem;
-    transition: 0.3s;
 }
 
-.navbar .menu li a:hover {
-    color: #ff6600;
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 
-/* 3. الواجهة الرئيسية (Hero Section) */
+/* --- واجهة الموقع (Hero) --- */
 .hero {
-    position: relative;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background-image: url('img/background.jpeg'); /* تأكد من المسار */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('img/background.jpeg') center center no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* تعتيم الخلفية لبروز النص */
-    z-index: 1;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px;
 }
 
 .hero-text h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
 
-.hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* الأزرار في الواجهة */
 .hero-btns {
     display: flex;
     gap: 15px;
@@ -103,75 +81,90 @@ body {
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 50px;
+    padding: 12px 35px;
+    background-color: #ff6600;
+    color: #fff;
     text-decoration: none;
+    border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
-    cursor: pointer;
-}
-
-.btn:first-child { /* زر واتساب */
-    background-color: #ff6600;
-    color: white;
-}
-
-.btn-outline { /* زر معرض الأعمال */
-    background-color: transparent;
     border: 2px solid #ff6600;
-    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #fff;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255,102,0,0.4);
+    transform: scale(1.05);
+    background-color: #e65c00;
 }
 
-/* 4. الأقسام العامة */
+/* --- الأقسام العامة --- */
 .section {
     padding: 80px 10%;
-    text-align: center;
 }
 
 .gray-bg {
-    background-color: #ececec;
+    background-color: #f8f8f8;
 }
 
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #222;
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
     position: relative;
     padding-bottom: 10px;
 }
 
-.section h2::after {
-    content: "";
-    width: 60px;
+.section-title::after {
+    content: '';
+    width: 70px;
     height: 4px;
-    background: #ff6600;
+    background-color: #ff6600;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* 5. معرض الصور (Gallery Grid) */
+/* --- بطاقات الخدمات --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* --- معرض الأعمال (الجاليري) --- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
 }
 
 .gallery-item {
     position: relative;
-    height: 250px;
-    border-radius: 10px;
+    height: 200px;
     overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #eee;
 }
 
 .gallery-item img {
@@ -181,110 +174,91 @@ body {
     transition: 0.5s;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
 .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(255, 102, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: 0.4s;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.3s; color: #fff; font-weight: bold;
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
+.gallery-item:hover .overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.1); }
 
-.overlay span {
-    color: white;
-    border: 1px solid white;
-    padding: 5px 15px;
-    font-size: 0.9rem;
-}
-
-/* 6. التذييل (Footer) */
-footer {
-    background: #111;
-    color: #777;
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid #ff6600;
-}
-
-/* 7. التوافق مع الشاشات الصغيرة (Mobile) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-    }
-    .navbar .menu {
-        margin-top: 10px;
-        gap: 10px;
-        font-size: 0.8rem;
-    }
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-}
-/* تنسيق الزر الدائري العائم */
+/* --- زر الواتساب العائم --- */
 .whatsapp-fixed {
     position: fixed;
-    bottom: 30px; /* المسافة من الأسفل */
-    left: 30px;   /* المسافة من اليسار */
-    z-index: 9999;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2000;
     text-decoration: none;
 }
 
 .circle-btn {
-    width: 90px;
-    height: 90px;
-    background-color: #25d366; /* لون واتساب الأخضر أو استخدم #ff6600 ليتماشى مع شعارك */
+    width: 80px;
+    height: 80px;
+    background-color: #25d366;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 14px;
+    color: #fff;
+    font-size: 12px;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    animation: pulse 2s infinite; /* تأثير النبض لجذب الانتباه */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
 }
 
-.circle-btn span {
-    padding: 10px;
-    line-height: 1.2;
-}
-
-.circle-btn:hover {
-    transform: scale(1.1); /* تكبير بسيط عند التمرير */
-    background-color: #128c7e;
-}
-
-/* حركة النبض */
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-/* إخفاء الزر في الشاشات الصغيرة جداً إذا كان يغطي المحتوى (اختياري) */
-@media (max-width: 480px) {
-    .circle-btn {
-        width: 70px;
-        height: 70px;
-        font-size: 11px;
+/* --- الفوتر وحقوق المهندس --- */
+footer {
+    padding: 40px 5%;
+    background-color: #000;
+    color: #fff;
+    border-top: 3px solid #ff6600;
+}
+
+.developer-info {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.developer-info strong {
+    color: #ff6600;
+}
+
+.developer-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* --- توافق الجوال --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; left: 0; width: 100%;
+        background-color: rgba(0,0,0,0.95);
+        padding: 20px;
     }
+    .menu.active { display: flex; }
+    
+    .hero {
+        background-position: 85% center; /* يركز على صورة الشخص في الجوال */
+    }
+
+    .hero-text h1 { font-size: 2.2rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .circle-btn { width: 70px; height: 70px; }
 }
