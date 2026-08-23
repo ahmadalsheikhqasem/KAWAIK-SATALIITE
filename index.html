@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762600083633123"
+         crossorigin="anonymous"></script>
+
     <title>أبو كويك للستلايت - معرض الأعمال والخدمات</title>
     
     <link rel="stylesheet" href="style.css">
@@ -18,13 +23,12 @@
         margin-top: 30px !important;
     }
 
-    /* التنسيق الأساسي للزر (لإخفاء اللون الأزرق والخط) */
     .custom-btn {
         display: inline-block !important;
         padding: 15px 30px !important;
         border-radius: 10px !important;
-        text-decoration: none !important; /* يزيل الخط تحت النص */
-        color: white !important; /* يجعل النص أبيض */
+        text-decoration: none !important;
+        color: white !important;
         font-weight: bold !important;
         font-size: 18px !important;
         min-width: 200px !important;
@@ -33,23 +37,20 @@
         border: none !important;
     }
 
-    /* الألوان الخلفية */
     .whatsapp-bg { 
-        background-color: #2ecc71 !important; /* أخضر */
+        background-color: #2ecc71 !important;
     }
 
     .facebook-bg { 
-        background-color: #1e90ff !important; /* أزرق */
+        background-color: #1e90ff !important;
     }
 
-    /* تأثير عند تمرير الماوس */
     .custom-btn:hover {
         opacity: 0.9 !important;
         transform: translateY(-3px) !important;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
     }
 
-    /* التوافق مع شاشات الموبايل */
     @media (max-width: 768px) {
         .custom-btn {
             width: 100% !important;
@@ -58,13 +59,13 @@
 </style>
 
     <style>
-        /* إضافة تنسيقات الخريطة مباشرة لضمان ظهورها بشكل جمالي */
         .contact-section {
             padding: 40px 20px;
             background-color: #f8faff;
             direction: rtl;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         .map-card {
             display: flex;
             max-width: 1000px;
@@ -75,6 +76,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             flex-wrap: wrap;
         }
+
         .map-info {
             flex: 1;
             padding: 40px;
@@ -82,8 +84,18 @@
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: white;
         }
-        .map-info h2 { margin-bottom: 20px; font-size: 28px; }
-        .map-info p { margin: 15px 0; font-size: 16px; line-height: 1.6; }
+
+        .map-info h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .map-info p {
+            margin: 15px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
         .map-btn {
             display: inline-block;
             margin-top: 20px;
@@ -95,21 +107,39 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        .map-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .map-frame { flex: 1.5; min-width: 300px; height: 450px; }
+
+        .map-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .map-frame {
+            flex: 1.5;
+            min-width: 300px;
+            height: 450px;
+        }
+
         @media (max-width: 768px) {
-            .map-card { flex-direction: column; }
-            .map-frame { height: 300px; }
+            .map-card {
+                flex-direction: column;
+            }
+
+            .map-frame {
+                height: 300px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
         <div class="logo">
             <img src="img/logo.jpeg" alt="شعار كويك ستلايت">
         </div>
+
         <div class="menu-toggle" id="mobile-menu">☰</div>
+
         <ul class="menu">
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#about">نبذة عنا</a></li>
@@ -123,6 +153,7 @@
         <div class="hero-text">
             <h1>أبو كويك للستلايت</h1>
             <p>خبراء في تركيب وصيانة وبرمجة أنظمة الستلايت و IPTV</p>
+
             <div class="hero-btns">
                 <a href="#contact" class="btn">تواصل معنا</a>
                 <a href="#gallery" class="btn btn-outline">مشاهدة أعمالنا</a>
@@ -132,112 +163,192 @@
 
     <section class="section" id="about">
         <div class="container">
+
             <h2 class="section-title">نبذة عنا</h2>
+
             <div class="about-card">
                 <p>
                     محل أبو كويك ستلايت متخصص في تقديم حلول متكاملة لأنظمة الاستقبال الفضائي في منطقة غزة - الزيتون. 
                     نتميز بالسرعة والدقة لضمان أفضل إشارة ومشاهدة ممتعة.
                 </p>
             </div>
+
         </div>
     </section>
 
     <section class="section gray-bg" id="services">
         <div class="container">
+
             <h2 class="section-title">خدماتنا</h2>
+
             <div class="services-grid">
+
                 <div class="service-card">
                     <div class="icon">📡</div>
                     <h3>تركيب وصيانة</h3>
                     <p>تركيب الأطباق وتمديد الكوابل باحترافية.</p>
                 </div>
+
                 <div class="service-card">
                     <div class="icon">💻</div>
                     <h3>برمجة</h3>
                     <p>تحديث الرسيفرات وترتيب القنوات دورياً.</p>
                 </div>
+
                 <div class="service-card">
                     <div class="icon">🌐</div>
                     <h3>IPTV</h3>
                     <p>اشتراكات قوية بجودة عالية وبدون تقطيع.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section class="section" id="gallery">
         <div class="container">
+
             <h2 class="section-title">معرض أعمالنا</h2>
+
             <div class="gallery-grid" id="gallery-container">
-                </div>
+            </div>
+
         </div>
     </section>
 
     <section class="section gray-bg" id="contact">
-    <div class="container">
-        <h2 class="section-title">التواصل معنا</h2>
-        
-        <div class="contact-flex">
-            <a href="https://wa.me/972592480001" target="_blank" class="custom-btn whatsapp-bg">
-                التواصل عبر واتساب
-            </a>
 
-            <a href="https://www.facebook.com/share/1D18CNSgUG/" target="_blank" class="custom-btn facebook-bg">
-                زيارة صفحتنا على فيسبوك
-            </a>
+        <div class="container">
+
+            <h2 class="section-title">التواصل معنا</h2>
+
+            <div class="contact-flex">
+
+                <a href="https://wa.me/972592480001"
+                   target="_blank"
+                   class="custom-btn whatsapp-bg">
+                    التواصل عبر واتساب
+                </a>
+
+                <a href="https://www.facebook.com/share/1D18CNSgUG/"
+                   target="_blank"
+                   class="custom-btn facebook-bg">
+                    زيارة صفحتنا على فيسبوك
+                </a>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="contact-section">
+
         <div class="map-card">
+
             <div class="map-info">
+
                 <h2>تشرفنا بزيارتكم</h2>
-                <p>📍 <strong>الموقع:</strong> غزة - الزيتون - بالقرب من مسجد الشمعة والمطبخ الذهبي</p>
-                <p>⏰ <strong>ساعات العمل:</strong> 10:00 ص - 8:00 م</p>
-                <p>⭐ <strong>التقييم:</strong> 5 نجوم على Google</p>
-<a href="https://maps.app.goo.gl/pn5Y4tk8R4qM5kMc9" target="_blank" class="map-btn">فتح في خرائط Google</a>            </div>
+
+                <p>
+                    📍 <strong>الموقع:</strong>
+                    غزة - الزيتون - بالقرب من مسجد الشمعة والمطبخ الذهبي
+                </p>
+
+                <p>
+                    ⏰ <strong>ساعات العمل:</strong>
+                    10:00 ص - 8:00 م
+                </p>
+
+                <p>
+                    ⭐ <strong>التقييم:</strong>
+                    5 نجوم على Google
+                </p>
+
+                <a href="https://maps.app.goo.gl/pn5Y4tk8R4qM5kMc9"
+                   target="_blank"
+                   class="map-btn">
+                    فتح في خرائط Google
+                </a>
+
+            </div>
             
             <div class="map-frame">
+
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5532585971485!2d34.4649533!3d31.49525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14fd7f22ba0191d1%3A0x237b3e7d52938606!2sKWAIK%20IPTV%20UNIVERSAL!5e0!3m2!1sar!2s!4v1705830000000!5m2!1sar!2s" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
             </div>
         </div>
     </section>
 
     <footer>
+
         <div class="footer-content">
-            <p>جميع الحقوق محفوظة © 2026 أبو كويك ستلايت</p>
+
+            <p>
+                جميع الحقوق محفوظة © 2026 أبو كويك ستلايت
+            </p>
+
             <div class="developer-info">
-                <p>تصميم وبرمجة: <strong>مهندس أحمد محمد الشيخ قاسم</strong></p>
-                <p>هاتف: <a href="tel:0595703312">0595703312</a></p>
+
+                <p>
+                    تصميم وبرمجة:
+                    <strong>مهندس أحمد محمد الشيخ قاسم</strong>
+                </p>
+
+                <p>
+                    هاتف:
+                    <a href="tel:0595703312">0595703312</a>
+                </p>
+
             </div>
+
         </div>
+
     </footer>
 
     <script>
+
         // توليد معرض الصور
         const gallery = document.getElementById('gallery-container');
+
         for (let i = 1; i <= 28; i++) {
+
             const item = document.createElement('div');
+
             item.className = 'gallery-item';
+
             item.innerHTML = `
-                <img src="img/${i}.jpeg" alt="عمل ${i}" onerror="this.src='img/${i}.jpg'">
-                <div class="overlay"><span>رؤية العمل</span></div>
+                <img src="img/${i}.jpeg"
+                     alt="عمل ${i}"
+                     onerror="this.src='img/${i}.jpg'">
+
+                <div class="overlay">
+                    <span>رؤية العمل</span>
+                </div>
             `;
+
             gallery.appendChild(item);
         }
 
         // تحكم القائمة في الجوال
         const menuToggle = document.getElementById('mobile-menu');
+
         const menu = document.querySelector('.menu');
+
         menuToggle.onclick = () => menu.classList.toggle('active');
+
         document.querySelectorAll('.menu a').forEach(link => {
             link.onclick = () => menu.classList.remove('active');
         });
+
     </script>
 
 </body>
-</html>
+                </html>
