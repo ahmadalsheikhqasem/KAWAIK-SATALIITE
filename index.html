@@ -12,15 +12,22 @@
 
     <!-- SEO -->
     <meta name="description"
-        content="أبو كويك للستلايت - خدمات تركيب وصيانة وبرمجة أنظمة الستلايت وأجهزة الاستقبال وخدمات IPTV في غزة - الزيتون.">
+        content="أبو كويك للستلايت في غزة - الزيتون. خدمات تركيب وصيانة وبرمجة أجهزة الاستقبال والرسيفرات وتمديد كوابل الإشارة والمساعدة في إعداد أجهزة IPTV.">
 
     <meta name="keywords"
-        content="أبو كويك للستلايت, ستلايت غزة, تركيب ستلايت, صيانة رسيفرات, برمجة رسيفرات, IPTV غزة">
+        content="أبو كويك للستلايت, ستلايت غزة, ستلايت الزيتون, تركيب ستلايت, صيانة رسيفرات, برمجة رسيفرات, أجهزة استقبال, IPTV غزة">
 
     <meta name="author" content="أبو كويك للستلايت">
     <meta name="robots" content="index, follow">
 
+    <meta property="og:title" content="أبو كويك للستلايت | غزة - الزيتون">
+    <meta property="og:description"
+        content="خدمات تركيب وصيانة وبرمجة أنظمة الستلايت وأجهزة الاستقبال وتمديد كوابل الإشارة في غزة.">
+    <meta property="og:type" content="website">
+
     <title>أبو كويك للستلايت | تركيب وصيانة وبرمجة الستلايت و IPTV</title>
+
+    <link rel="canonical" href="https://kawaik-sataliite-a4jf.onrender.com/">
 
     <link rel="stylesheet" href="style.css">
 
@@ -29,10 +36,18 @@
         href="img/logo.jpeg">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+        }
 
         .contact-flex {
             display: flex !important;
             justify-content: center !important;
+            align-items: stretch !important;
             gap: 15px !important;
             flex-wrap: wrap !important;
             margin-top: 30px !important;
@@ -40,41 +55,46 @@
 
         .custom-btn {
             display: inline-block !important;
-            padding: 15px 30px !important;
-            border-radius: 10px !important;
+            box-sizing: border-box !important;
+            padding: 15px 25px !important;
+            border-radius: 12px !important;
             text-decoration: none !important;
-            color: white !important;
+            color: #fff !important;
             font-weight: bold !important;
-            font-size: 18px !important;
-            min-width: 200px !important;
+            font-size: 17px !important;
+            min-width: 210px !important;
             text-align: center !important;
-            transition: 0.3s ease !important;
-            border: none !important;
+            transition: .3s ease !important;
         }
 
         .whatsapp-bg {
-            background-color: #2ecc71 !important;
+            background: #25D366 !important;
         }
 
         .phone-bg {
-            background-color: #8e44ad !important;
+            background: #8e44ad !important;
         }
 
         .facebook-bg {
-            background-color: #1e90ff !important;
+            background: #1877F2 !important;
         }
 
         .custom-btn:hover {
-            opacity: 0.9 !important;
             transform: translateY(-3px) !important;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+            opacity: .92 !important;
+            box-shadow: 0 7px 20px rgba(0,0,0,.15) !important;
         }
 
-        .about-text {
+        .about-text,
+        .content-note {
             max-width: 900px;
             margin: auto;
             line-height: 2;
             font-size: 18px;
+        }
+
+        .about-text p {
+            margin: 0 0 18px;
         }
 
         .info-grid {
@@ -88,8 +108,12 @@
             background: #fff;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
             line-height: 1.9;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
         }
 
         .faq-item {
@@ -97,7 +121,7 @@
             margin: 15px 0;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 15px rgba(0,0,0,.06);
             line-height: 1.9;
         }
 
@@ -105,18 +129,11 @@
             margin-top: 0;
         }
 
-        .content-note {
-            max-width: 900px;
-            margin: 20px auto 0;
-            line-height: 2;
-            text-align: center;
-        }
-
         .contact-section {
-            padding: 40px 20px;
-            background-color: #f8faff;
+            padding: 45px 20px;
+            background: #f8faff;
             direction: rtl;
-            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
         }
 
         .map-card {
@@ -126,7 +143,7 @@
             background: #fff;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,.1);
             flex-wrap: wrap;
         }
 
@@ -134,8 +151,8 @@
             flex: 1;
             padding: 40px;
             min-width: 300px;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: white;
+            background: linear-gradient(135deg,#6a1b9a,#8e44ad,#d4af37);
+            color: #fff;
         }
 
         .map-info h2 {
@@ -146,24 +163,24 @@
         .map-info p {
             margin: 15px 0;
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .map-btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 25px;
+            padding: 13px 25px;
             background: #fff;
-            color: #b21f1f;
+            color: #6a1b9a;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: .3s;
         }
 
         .map-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,.25);
         }
 
         .map-frame {
@@ -172,16 +189,15 @@
             height: 450px;
         }
 
-        .contact-phone {
+        .trust-note {
+            max-width: 900px;
+            margin: 25px auto 0;
+            padding: 18px;
+            border-radius: 12px;
+            background: #fff;
+            line-height: 1.9;
+            box-shadow: 0 4px 15px rgba(0,0,0,.05);
             text-align: center;
-            margin-top: 25px;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .contact-phone a {
-            font-weight: bold;
-            text-decoration: none;
         }
 
         .footer-links {
@@ -195,10 +211,10 @@
             margin: 0 8px;
         }
 
-        @media (max-width: 768px) {
-
+        @media (max-width:768px) {
             .custom-btn {
                 width: 100% !important;
+                min-width: 0 !important;
             }
 
             .map-card {
@@ -207,128 +223,89 @@
 
             .map-frame {
                 height: 300px;
+                min-width: 100%;
             }
 
+            .map-info {
+                padding: 28px 22px;
+            }
         }
-
     </style>
-
 </head>
 
 <body>
 
-
 <!-- القائمة الرئيسية -->
-
 <nav class="navbar">
 
     <div class="logo">
-
         <a href="index.html">
-
             <img
                 src="img/logo.jpeg"
-                alt="شعار أبو كويك للستلايت">
-
+                alt="شعار أبو كويك للستلايت"
+                loading="eager">
         </a>
-
     </div>
 
-
-    <div
-        class="menu-toggle"
-        id="mobile-menu">
-
+    <div class="menu-toggle" id="mobile-menu" aria-label="فتح القائمة">
         ☰
-
     </div>
-
 
     <ul class="menu">
 
         <li>
-            <a href="#home">
-                الرئيسية
-            </a>
+            <a href="#home">الرئيسية</a>
         </li>
 
         <li>
-            <a href="about.html">
-                من نحن
-            </a>
+            <a href="about.html">من نحن</a>
         </li>
 
         <li>
-            <a href="#services">
-                خدماتنا
-            </a>
+            <a href="#services">خدماتنا</a>
         </li>
 
         <li>
-            <a href="#gallery">
-                معرض الأعمال
-            </a>
+            <a href="#gallery">معرض الأعمال</a>
         </li>
 
         <li>
-            <a href="#why-us">
-                لماذا نحن
-            </a>
+            <a href="#why-us">لماذا نحن</a>
         </li>
 
         <li>
-            <a href="#faq">
-                الأسئلة الشائعة
-            </a>
+            <a href="#faq">الأسئلة الشائعة</a>
         </li>
 
         <li>
-            <a href="contact.html">
-                تواصل معنا
-            </a>
+            <a href="contact.html">تواصل معنا</a>
         </li>
 
     </ul>
-
 </nav>
 
 
-
-<!-- الرئيسية -->
-
-<section
-    class="hero"
-    id="home">
+<!-- الصفحة الرئيسية -->
+<section class="hero" id="home">
 
     <div class="hero-text">
 
-        <h1>
-            أبو كويك للستلايت
-        </h1>
+        <h1>أبو كويك للستلايت</h1>
 
         <p>
-            خبراء في تركيب وصيانة وبرمجة أنظمة الستلايت
-            وأجهزة الاستقبال وخدمات IPTV في غزة.
+            خدمات تركيب وصيانة وبرمجة أنظمة الستلايت
+            وأجهزة الاستقبال وتمديد كوابل الإشارة
+            والمساعدة في إعداد أجهزة IPTV في غزة.
         </p>
-
 
         <div class="hero-btns">
 
-            <a
-                href="contact.html"
-                class="btn">
-
+            <a href="contact.html" class="btn">
                 تواصل معنا
-
             </a>
 
-
-            <a
-                href="#gallery"
-                class="btn btn-outline">
-
-                مشاهدة أعمالنا
-
+            <a href="#services" class="btn btn-outline">
+                تعرف على خدماتنا
             </a>
 
         </div>
@@ -338,19 +315,14 @@
 </section>
 
 
-
 <!-- من نحن -->
-
-<section
-    class="section"
-    id="about">
+<section class="section" id="about">
 
     <div class="container">
 
         <h2 class="section-title">
             من نحن
         </h2>
-
 
         <div class="about-card">
 
@@ -362,20 +334,19 @@
                     والإلكترونيات وخدمات IPTV.
                 </p>
 
-
                 <p>
-                    نقدم خدمات تركيب الأطباق وضبط الإشارة
-                    وتمديد كوابل الاستقبال وبرمجة أجهزة
-                    الرسيفر وصيانتها، بالإضافة إلى المساعدة
-                    في إعداد حلول IPTV المتوافقة مع الأجهزة
-                    المتوفرة لدى العملاء.
+                    نقدم خدمات تركيب أطباق الاستقبال وضبط
+                    الإشارة وتمديد كوابل الاستقبال وبرمجة
+                    أجهزة الرسيفر وترتيب القنوات، إضافة إلى
+                    المساعدة في إعداد الأجهزة والتطبيقات
+                    المتوافقة مع حلول IPTV المتوفرة لدى العميل.
                 </p>
 
-
                 <p>
-                    يقع نشاطنا في منطقة غزة - الزيتون،
-                    ونسعى إلى تطوير خدماتنا ومحتوى الموقع
-                    باستمرار وتقديم معلومات مفيدة للزوار.
+                    نعمل على تقديم معلومات عملية ومحتوى مفيد
+                    للزوار حول أجهزة الاستقبال والتوصيلات
+                    وإعدادات الستلايت، مع الحرص على تطوير
+                    الموقع والخدمات والمحتوى بصورة مستمرة.
                 </p>
 
             </div>
@@ -387,12 +358,8 @@
 </section>
 
 
-
 <!-- الخدمات -->
-
-<section
-    class="section gray-bg"
-    id="services">
+<section class="section gray-bg" id="services">
 
     <div class="container">
 
@@ -400,122 +367,90 @@
             خدماتنا
         </h2>
 
+        <p class="content-note">
+            نقدم مجموعة من الخدمات المتعلقة بأنظمة الاستقبال
+            وأجهزة الرسيفر والتوصيلات، مع تحديد الخدمة المناسبة
+            بعد معرفة نوع الجهاز والمشكلة وموقع العمل.
+        </p>
 
         <div class="services-grid">
 
-
             <div class="service-card">
+                <div class="icon">📡</div>
 
-                <div class="icon">
-                    📡
-                </div>
-
-                <h3>
-                    تركيب الستلايت
-                </h3>
+                <h3>تركيب الستلايت</h3>
 
                 <p>
                     تركيب أطباق الاستقبال وضبط اتجاه الطبق
                     وتحسين مستوى الإشارة وتمديد كوابل
                     الاستقبال بطريقة منظمة.
                 </p>
-
             </div>
 
 
             <div class="service-card">
+                <div class="icon">🔧</div>
 
-                <div class="icon">
-                    🔧
-                </div>
-
-                <h3>
-                    صيانة أجهزة الاستقبال
-                </h3>
+                <h3>صيانة أجهزة الاستقبال</h3>
 
                 <p>
                     فحص أجهزة الرسيفر ومتابعة المشكلات
                     المتعلقة بالتوصيلات والإشارة وإجراء
-                    أعمال الصيانة المناسبة.
+                    أعمال الصيانة المناسبة حسب حالة الجهاز.
                 </p>
-
             </div>
 
 
             <div class="service-card">
+                <div class="icon">💻</div>
 
-                <div class="icon">
-                    💻
-                </div>
-
-                <h3>
-                    برمجة الرسيفرات
-                </h3>
+                <h3>برمجة الرسيفرات</h3>
 
                 <p>
-                    ترتيب القنوات وإجراء الإعدادات المتاحة
-                    للجهاز وتحديث الإعدادات والبرامج عند
-                    الحاجة.
+                    إعداد أجهزة الرسيفر وترتيب القنوات
+                    وضبط الإعدادات المتاحة للجهاز حسب
+                    نوعه وإمكاناته.
                 </p>
-
             </div>
 
 
             <div class="service-card">
+                <div class="icon">🌐</div>
 
-                <div class="icon">
-                    🌐
-                </div>
-
-                <h3>
-                    خدمات IPTV
-                </h3>
+                <h3>إعداد IPTV</h3>
 
                 <p>
-                    المساعدة في إعداد أجهزة وتطبيقات IPTV
-                    المتوافقة مع الأجهزة المتوفرة لدى العميل.
+                    المساعدة في إعداد الأجهزة والتطبيقات
+                    المتوافقة مع حلول IPTV التي يملكها العميل،
+                    مع الالتزام باستخدام الخدمات المرخصة.
                 </p>
-
             </div>
 
 
             <div class="service-card">
+                <div class="icon">📺</div>
 
-                <div class="icon">
-                    📺
-                </div>
-
-                <h3>
-                    ضبط القنوات
-                </h3>
+                <h3>ضبط القنوات</h3>
 
                 <p>
                     المساعدة في البحث عن القنوات وترتيبها
-                    وضبط إعدادات الاستقبال بما يتناسب مع
-                    جهاز العميل.
+                    وضبط إعدادات الاستقبال بما يتناسب
+                    مع نوع الجهاز.
                 </p>
-
             </div>
 
 
             <div class="service-card">
+                <div class="icon">🔌</div>
 
-                <div class="icon">
-                    🔌
-                </div>
-
-                <h3>
-                    تمديد الكوابل والتوصيلات
-                </h3>
+                <h3>تمديد الكوابل والتوصيلات</h3>
 
                 <p>
                     تنفيذ وتمديد كوابل الإشارة والتوصيلات
-                    الخاصة بأنظمة الاستقبال مع تنظيم مسارات
-                    الأسلاك.
+                    الخاصة بأنظمة الاستقبال مع تنظيم
+                    مسارات الأسلاك قدر الإمكان.
                 </p>
-
             </div>
-
 
         </div>
 
@@ -524,12 +459,8 @@
 </section>
 
 
-
 <!-- معرض الأعمال -->
-
-<section
-    class="section"
-    id="gallery">
+<section class="section" id="gallery">
 
     <div class="container">
 
@@ -537,19 +468,14 @@
             معرض أعمالنا
         </h2>
 
-
         <p class="content-note">
-
-            يضم هذا القسم نماذج من أعمال تركيب وصيانة
-            وتجهيز أنظمة الاستقبال والأجهزة الإلكترونية.
-
+            نماذج من أعمال تركيب وصيانة وتجهيز أنظمة
+            الاستقبال والأجهزة الإلكترونية.
         </p>
-
 
         <div
             class="gallery-grid"
             id="gallery-container">
-
         </div>
 
     </div>
@@ -557,12 +483,8 @@
 </section>
 
 
-
 <!-- لماذا نحن -->
-
-<section
-    class="section gray-bg"
-    id="why-us">
+<section class="section gray-bg" id="why-us">
 
     <div class="container">
 
@@ -570,19 +492,15 @@
             لماذا تختار أبو كويك للستلايت؟
         </h2>
 
-
         <div class="info-grid">
 
-
             <div class="info-card">
 
-                <h3>
-                    خبرة عملية
-                </h3>
+                <h3>خبرة عملية</h3>
 
                 <p>
-                    خبرة عملية في تركيب أنظمة الاستقبال
-                    والتعامل مع أجهزة الرسيفر والتوصيلات.
+                    خبرة عملية في التعامل مع أنظمة الاستقبال
+                    وأجهزة الرسيفر والتوصيلات الإلكترونية.
                 </p>
 
             </div>
@@ -590,13 +508,11 @@
 
             <div class="info-card">
 
-                <h3>
-                    تنظيم العمل
-                </h3>
+                <h3>فحص المشكلة</h3>
 
                 <p>
-                    الاهتمام بتنظيم التوصيلات وفحص المشكلة
-                    قبل تنفيذ العمل قدر الإمكان.
+                    الاهتمام بفحص المشكلة ومعرفة طبيعتها
+                    قبل تحديد الإجراء المناسب قدر الإمكان.
                 </p>
 
             </div>
@@ -604,13 +520,11 @@
 
             <div class="info-card">
 
-                <h3>
-                    خدمة واضحة
-                </h3>
+                <h3>خدمة واضحة</h3>
 
                 <p>
                     توضيح طبيعة الخدمة والإعدادات المطلوبة
-                    للعميل بطريقة سهلة ومباشرة.
+                    للعميل بطريقة مباشرة وسهلة.
                 </p>
 
             </div>
@@ -618,18 +532,22 @@
 
             <div class="info-card">
 
-                <h3>
-                    تواصل مباشر
-                </h3>
+                <h3>تواصل مباشر</h3>
 
                 <p>
-                    إمكانية التواصل معنا مباشرة عبر الهاتف
-                    أو واتساب أو صفحة فيسبوك.
+                    إمكانية التواصل عبر الهاتف أو واتساب
+                    أو صفحة فيسبوك للاستفسار عن الخدمات.
                 </p>
 
             </div>
 
+        </div>
 
+        <div class="trust-note">
+            تختلف طبيعة الخدمة والتكلفة حسب نوع الجهاز
+            ومكان العمل والمشكلة المطلوبة معالجتها.
+            يرجى التواصل معنا للحصول على معلومات أدق
+            قبل الزيارة.
         </div>
 
     </div>
@@ -637,12 +555,8 @@
 </section>
 
 
-
 <!-- الأسئلة الشائعة -->
-
-<section
-    class="section"
-    id="faq">
+<section class="section" id="faq">
 
     <div class="container">
 
@@ -660,7 +574,7 @@
             <p>
                 نعم، نقدم خدمات تركيب الأطباق وضبط اتجاه
                 الاستقبال وتمديد كوابل الإشارة حسب موقع
-                العميل والإمكانيات المتاحة.
+                العمل والإمكانيات المتاحة.
             </p>
 
         </div>
@@ -674,7 +588,7 @@
 
             <p>
                 نعم، يمكن المساعدة في إعداد الرسيفر وترتيب
-                القنوات وإجراء الإعدادات المناسبة لنوع الجهاز.
+                القنوات وضبط الإعدادات المناسبة لنوع الجهاز.
             </p>
 
         </div>
@@ -687,9 +601,23 @@
             </h3>
 
             <p>
-                نقدم المساعدة في إعداد واستخدام حلول IPTV
-                المتوافقة مع الأجهزة والتطبيقات المتوفرة
-                لدى العميل.
+                نقدم المساعدة في إعداد الأجهزة والتطبيقات
+                المتوافقة مع حلول IPTV التي يملكها العميل،
+                مع الالتزام باستخدام الخدمات المرخصة.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                هل يمكنني التواصل قبل زيارة الموقع؟
+            </h3>
+
+            <p>
+                نعم، يفضل التواصل مسبقًا لمعرفة طبيعة المشكلة
+                ونوع الجهاز وتحديد إمكانية تقديم الخدمة.
             </p>
 
         </div>
@@ -708,68 +636,49 @@
 
         </div>
 
-
     </div>
 
 </section>
 
 
-
 <!-- التواصل -->
-
-<section
-    class="section gray-bg"
-    id="contact">
+<section class="section gray-bg" id="contact">
 
     <div class="container">
 
         <h2 class="section-title">
-            التواصل معنا
+            تواصل معنا
         </h2>
 
-
         <p class="content-note">
-
             للاستفسار عن خدمات تركيب وصيانة وبرمجة أجهزة
-            الاستقبال والستلايت وخدمات IPTV، يمكنكم
-            التواصل معنا مباشرة.
-
+            الاستقبال والستلايت وتمديد الكوابل وإعداد IPTV،
+            يمكنكم التواصل معنا مباشرة.
         </p>
 
-
         <div class="contact-flex">
-
 
             <a
                 href="https://wa.me/972592480001"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="custom-btn whatsapp-bg">
-
                 📱 التواصل عبر واتساب
-
             </a>
-
 
             <a
                 href="tel:0592480001"
                 class="custom-btn phone-bg">
-
                 📞 الاتصال بنا: 0592480001
-
             </a>
-
 
             <a
                 href="https://www.facebook.com/share/1D18CNSgUG/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="custom-btn facebook-bg">
-
                 🔵 زيارة صفحتنا على فيسبوك
-
             </a>
-
 
         </div>
 
@@ -778,13 +687,10 @@
 </section>
 
 
-
 <!-- الموقع -->
-
 <section class="contact-section">
 
     <div class="map-card">
-
 
         <div class="map-info">
 
@@ -792,46 +698,30 @@
                 موقعنا ومعلومات الزيارة
             </h2>
 
-
             <p>
-
                 📍
-                <strong>
-                    الموقع:
-                </strong>
-
+                <strong>الموقع:</strong>
                 غزة - الزيتون -
                 بالقرب من مسجد الشمعة والمطبخ الذهبي
-
             </p>
-
 
             <p>
-
                 ⏰
-                <strong>
-                    ساعات العمل:
-                </strong>
-
+                <strong>ساعات العمل:</strong>
                 10:00 صباحًا - 8:00 مساءً
-
             </p>
-
 
             <p>
                 للاستفسار عن توفر الخدمة أو إمكانية استقبال
                 الطلب، يرجى التواصل معنا قبل الزيارة.
             </p>
 
-
             <a
                 href="https://maps.app.goo.gl/pn5Y4tk8R4qM5kMc9"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="map-btn">
-
                 فتح الموقع في خرائط Google
-
             </a>
 
         </div>
@@ -846,6 +736,7 @@
                 style="border:0;"
                 allowfullscreen=""
                 loading="lazy"
+                title="موقع أبو كويك للستلايت على الخريطة"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
@@ -856,18 +747,14 @@
 </section>
 
 
-
 <!-- التذييل -->
-
 <footer>
 
     <div class="footer-content">
 
-
         <p>
             جميع الحقوق محفوظة © 2026 أبو كويك للستلايت
         </p>
-
 
         <div class="footer-links">
 
@@ -895,7 +782,6 @@
 
         </div>
 
-
         <div class="developer-info">
 
             <p>
@@ -904,7 +790,6 @@
                     مهندس أحمد محمد الشيخ قاسم
                 </strong>
             </p>
-
 
             <p>
                 هاتف:
@@ -920,79 +805,72 @@
 </footer>
 
 
-
 <script>
 
-    // إنشاء معرض الصور
-
-    const gallery =
-        document.getElementById('gallery-container');
-
+    // معرض الصور
+    const gallery = document.getElementById("gallery-container");
 
     for (let i = 1; i <= 28; i++) {
 
-        const item =
-            document.createElement('div');
+        const item = document.createElement("div");
 
-
-        item.className =
-            'gallery-item';
-
+        item.className = "gallery-item";
 
         item.innerHTML = `
-
             <img
                 src="img/${i}.jpeg"
                 alt="صورة من أعمال أبو كويك للستلايت رقم ${i}"
                 loading="lazy"
-                onerror="this.onerror=null; this.src='img/${i}.jpg'">
+                onerror="this.onerror=null;this.src='img/${i}.jpg'">
 
             <div class="overlay">
-
-                <span>
-                    مشاهدة العمل
-                </span>
-
+                <span>مشاهدة العمل</span>
             </div>
-
         `;
 
-
         gallery.appendChild(item);
-
     }
 
 
-
     // قائمة الهاتف
+    const menuToggle = document.getElementById("mobile-menu");
+    const menu = document.querySelector(".menu");
 
-    const menuToggle =
-        document.getElementById('mobile-menu');
+    if (menuToggle && menu) {
 
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
 
-    const menu =
-        document.querySelector('.menu');
+        document.querySelectorAll(".menu a").forEach(function (link) {
 
+            link.addEventListener("click", function () {
+                menu.classList.remove("active");
+            });
 
-    menuToggle.onclick = () => {
-
-        menu.classList.toggle('active');
-
-    };
-
-
-    document.querySelectorAll('.menu a').forEach(link => {
-
-        link.onclick = () => {
-
-            menu.classList.remove('active');
-
-        };
-
-    });
+        });
+    }
 
 </script>
 
+
+<!-- بيانات منظمة للموقع -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "أبو كويك للستلايت",
+    "description": "خدمات تركيب وصيانة وبرمجة أنظمة الستلايت وأجهزة الاستقبال وتمديد كوابل الإشارة في غزة.",
+    "telephone": "+970592480001",
+    "url": "https://kawaik-sataliite-a4jf.onrender.com/",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "غزة",
+        "addressRegion": "قطاع غزة",
+        "addressCountry": "PS"
+    }
+}
+</script>
 
 </body>
 </html>
