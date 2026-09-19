@@ -77,7 +77,7 @@
         .menu {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 14px;
             align-items: center;
         }
 
@@ -86,11 +86,13 @@
             font-size: 15px;
             font-weight: 500;
             transition: 0.2s ease;
+            padding: 5px 7px;
+            border-radius: 6px;
         }
 
         .menu a:hover {
             color: #000000;
-            text-decoration: underline;
+            background: #f2f2f2;
         }
 
         /* =========================
@@ -99,7 +101,7 @@
 
         .hero {
             background: linear-gradient(135deg, #f1f2f4, #ffffff);
-            padding: 58px 0 68px;
+            padding: 62px 0 68px;
         }
 
         .hero-content {
@@ -108,52 +110,25 @@
             text-align: center;
         }
 
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 22px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: #eeeeee;
-            border: 4px solid #ffffff;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .profile-fallback {
-            display: none;
-            color: #222222;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
         .hero h1 {
-            margin: 0 0 6px;
-            font-size: clamp(32px, 6vw, 52px);
+            margin: 0 0 7px;
+            font-size: clamp(34px, 6vw, 54px);
             color: #111111;
             font-weight: 800;
+            letter-spacing: 0.3px;
         }
 
         .hero h2 {
             margin: 0 0 18px;
             color: #333333;
-            font-size: 22px;
+            font-size: 23px;
             font-weight: 500;
         }
 
         .hero p {
             font-size: 18px;
             color: #333333;
-            margin: 0 auto 26px;
+            margin: 0 auto 27px;
             max-width: 780px;
         }
 
@@ -165,8 +140,11 @@
         }
 
         .button {
-            display: inline-block;
-            padding: 11px 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 11px 21px;
             border-radius: 9px;
             background: #202020;
             color: #ffffff;
@@ -318,21 +296,6 @@
             margin-top: 0;
         }
 
-        .aid-link {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 9px 15px;
-            border-radius: 8px;
-            background: #202020;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .aid-link:hover {
-            background: #000000;
-        }
-
         .contact-mini {
             max-width: 900px;
             margin: 25px auto 0;
@@ -344,15 +307,24 @@
         }
 
         .contact-mini h3 {
-            margin: 0 0 12px;
+            margin: 0 0 13px;
             font-size: 20px;
         }
 
         .contact-mini a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             margin: 5px 8px;
             font-weight: 700;
             color: #111111;
+        }
+
+        .author-name {
+            margin-top: 12px;
+            color: #444444;
+            font-weight: 700;
+            font-size: 15px;
         }
 
         /* =========================
@@ -606,6 +578,13 @@
             font-size: 14px;
         }
 
+        .footer-author {
+            margin-top: 8px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
         /* =========================
            MOBILE
         ========================= */
@@ -699,11 +678,6 @@
                 font-size: 19px;
             }
 
-            .profile-image {
-                width: 105px;
-                height: 105px;
-            }
-
             .aid-item summary {
                 font-size: 16px;
                 padding: 17px;
@@ -711,6 +685,11 @@
 
             .education-card {
                 padding: 16px;
+            }
+
+            .button {
+                width: 100%;
+                max-width: 320px;
             }
         }
 
@@ -727,14 +706,14 @@
         </a>
 
         <nav class="menu">
-            <a href="#aid-links">المساعدات</a>
-            <a href="#education">التعليم الإلكتروني</a>
-            <a href="#services">الخدمات</a>
-            <a href="#guide">الدليل</a>
-            <a href="#about">من نحن</a>
-            <a href="#faq">الأسئلة الشائعة</a>
-            <a href="#contact">اتصل بنا</a>
-            <a href="privacy.html">الخصوصية</a>
+            <a href="#aid-links">🤝 المساعدات</a>
+            <a href="#education">🎓 التعليم الإلكتروني</a>
+            <a href="#services">🛰️ الخدمات</a>
+            <a href="#guide">📖 الدليل</a>
+            <a href="#about">ℹ️ من نحن</a>
+            <a href="#faq">❓ الأسئلة الشائعة</a>
+            <a href="#contact">📞 اتصل بنا</a>
+            <a href="privacy.html">🔒 الخصوصية</a>
         </nav>
 
     </div>
@@ -750,13 +729,6 @@
 
     <div class="container hero-content">
 
-        <div class="profile-image">
-            <img src="profile.jpg"
-                 alt="KWAIK SAT - كويك ستلايت"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="profile-fallback">ك</span>
-        </div>
-
         <h1>KWAIK SAT</h1>
 
         <h2>كويك ستلايت</h2>
@@ -770,15 +742,15 @@
         <div class="buttons">
 
             <a class="button" href="#aid-links">
-                برنامج المساعدات
+                🤝 برنامج المساعدات
             </a>
 
             <a class="button secondary" href="#education">
-                التعليم الإلكتروني
+                🎓 التعليم الإلكتروني
             </a>
 
             <a class="button secondary" href="#services">
-                خدمات كويك ستلايت
+                🛰️ خدمات كويك ستلايت
             </a>
 
         </div>
@@ -809,7 +781,7 @@
 
         <div class="aid-intro">
 
-            <h3>دليل المساعدات الإنسانية</h3>
+            <h3>🔎 دليل المساعدات الإنسانية</h3>
 
             <p>
                 نسعى إلى جمع الروابط والمعلومات المنشورة من الجهات
@@ -821,7 +793,7 @@
 
         <div class="aid-notice">
 
-            <strong>تنويه مهم:</strong>
+            <strong>⚠️ تنويه مهم:</strong>
 
             نحن نحرص على البحث عن الروابط والمصادر الموثوقة والتحقق منها
             قدر الإمكان، ونسعى إلى تجنب نشر الروابط المشبوهة أو غير الموثوقة
@@ -915,12 +887,16 @@
             <h3>📞 للتواصل معنا حول الموقع</h3>
 
             <a href="https://wa.me/970592480001" target="_blank" rel="noopener noreferrer">
-                واتساب: 00970592480001
+                💬 واتساب: 00970592480001
             </a>
 
             <a href="mailto:n299964@hotmail.com">
-                البريد الإلكتروني: n299964@hotmail.com
+                📧 البريد الإلكتروني: n299964@hotmail.com
             </a>
+
+            <div class="author-name">
+                👤 AHMED KWAIK
+            </div>
 
         </div>
 
@@ -1023,23 +999,6 @@
 
 
             <a class="education-card"
-               href="https://moe.edu.ps/gaza-VirtualSchools"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <span class="education-icon">🏫</span>
-
-                <div>
-                    <h3>المدارس الافتراضية</h3>
-                    <p>
-                        منصة المدارس الافتراضية والخدمات التعليمية في غزة.
-                    </p>
-                </div>
-
-            </a>
-
-
-            <a class="education-card"
                href="https://www.moe.edu.ps/"
                target="_blank"
                rel="noopener noreferrer">
@@ -1093,7 +1052,7 @@
 
         <div class="education-note">
 
-            <strong>تنبيه:</strong>
+            <strong>⚠️ تنبيه:</strong>
             جميع الروابط الموجودة في هذا القسم موجهة إلى مواقع الوزارة
             أو الخدمات التي تشير إليها الوزارة رسميًا. ننصح بالتأكد من
             عنوان الموقع قبل إدخال أي بيانات شخصية.
@@ -1114,7 +1073,7 @@
 
         <div class="section-title">
 
-            <h2>خدمات KWAIK SAT – كويك ستلايت</h2>
+            <h2>🛰️ خدمات KWAIK SAT – كويك ستلايت</h2>
 
             <p>
                 مجالات مرتبطة بأنظمة الاستقبال والتلفزيون
@@ -1126,7 +1085,7 @@
         <div class="cards">
 
             <div class="card">
-                <h3>تركيب أطباق الستلايت</h3>
+                <h3>🛰️ تركيب أطباق الستلايت</h3>
                 <p>
                     تركيب أطباق الاستقبال وتثبيتها وضبط الاتجاه
                     والاستقطاب وفحص جودة الإشارة.
@@ -1134,7 +1093,7 @@
             </div>
 
             <div class="card">
-                <h3>ضبط الإشارة</h3>
+                <h3>📡 ضبط الإشارة</h3>
                 <p>
                     فحص قوة وجودة الإشارة وتشخيص أسباب ضعف
                     الاستقبال أو انقطاع بعض القنوات.
@@ -1142,7 +1101,7 @@
             </div>
 
             <div class="card">
-                <h3>أجهزة الاستقبال</h3>
+                <h3>📺 أجهزة الاستقبال</h3>
                 <p>
                     إعداد أجهزة الرسيفر وفحص التوصيلات وإعدادات
                     الأقمار والترددات والقنوات.
@@ -1150,7 +1109,7 @@
             </div>
 
             <div class="card">
-                <h3>صيانة التلفزيون</h3>
+                <h3>🔧 صيانة التلفزيون</h3>
                 <p>
                     معلومات حول تشخيص بعض أعطال أجهزة LCD وLED
                     ومشاكل الصورة والصوت ومصادر الإشارة.
@@ -1158,7 +1117,7 @@
             </div>
 
             <div class="card">
-                <h3>الشبكات والكابلات</h3>
+                <h3>🌐 الشبكات والكابلات</h3>
                 <p>
                     تنظيم وتمديد كابلات الشبكات والإشارة وفحص
                     التوصيلات المستخدمة في أنظمة التلفزيون والاستقبال.
@@ -1166,7 +1125,7 @@
             </div>
 
             <div class="card">
-                <h3>الإلكترونيات</h3>
+                <h3>⚡ الإلكترونيات</h3>
                 <p>
                     شروحات ومعلومات عملية حول بعض الدوائر والأجهزة
                     الإلكترونية المستخدمة في المنزل.
@@ -1190,7 +1149,7 @@
 
         <div class="section-title">
 
-            <h2>دليل الستلايت والإلكترونيات</h2>
+            <h2>📖 دليل الستلايت والإلكترونيات</h2>
 
             <p>
                 معلومات عملية مبسطة لمساعدة المستخدم على فهم
@@ -1201,7 +1160,7 @@
 
         <article class="article">
 
-            <h3>كيف تختار طبق الستلايت المناسب؟</h3>
+            <h3>🛰️ كيف تختار طبق الستلايت المناسب؟</h3>
 
             <p>
                 يعتمد اختيار حجم طبق الستلايت على القمر الصناعي الذي
@@ -1219,7 +1178,7 @@
 
         <article class="article">
 
-            <h3>الفرق بين قوة الإشارة وجودة الإشارة</h3>
+            <h3>📶 الفرق بين قوة الإشارة وجودة الإشارة</h3>
 
             <p>
                 تعرض أجهزة الاستقبال عادة مؤشرين للإشارة: القوة والجودة.
@@ -1237,7 +1196,7 @@
 
         <article class="article">
 
-            <h3>أسباب ضعف أو انقطاع إشارة الستلايت</h3>
+            <h3>⚠️ أسباب ضعف أو انقطاع إشارة الستلايت</h3>
 
             <ul>
                 <li>تحرك طبق الاستقبال من مكانه.</li>
@@ -1253,7 +1212,7 @@
 
         <article class="article">
 
-            <h3>خطوات فحص جهاز الرسيفر عند عدم وجود صورة</h3>
+            <h3>📺 خطوات فحص جهاز الرسيفر عند عدم وجود صورة</h3>
 
             <p>
                 عند توقف الصورة، ابدأ بفحص مصدر الكهرباء والتأكد من أن
@@ -1276,7 +1235,7 @@
 
         <article class="article">
 
-            <h3>نصائح للحفاظ على نظام الستلايت</h3>
+            <h3>🔧 نصائح للحفاظ على نظام الستلايت</h3>
 
             <p>
                 يفضل فحص الوصلات الخارجية بشكل دوري والتأكد من عدم
@@ -1293,7 +1252,7 @@
 
         <article class="article">
 
-            <h3>ما هو IPTV؟</h3>
+            <h3>🌐 ما هو IPTV؟</h3>
 
             <p>
                 IPTV هو نظام لنقل المحتوى التلفزيوني عبر شبكات الإنترنت
@@ -1311,7 +1270,7 @@
 
         <article class="article">
 
-            <h3>متى تحتاج إلى فني؟</h3>
+            <h3>👨‍🔧 متى تحتاج إلى فني؟</h3>
 
             <p>
                 إذا تم فحص الكابلات والتوصيلات وإعدادات الجهاز ولم يتم
@@ -1341,7 +1300,7 @@
     <div class="container">
 
         <div class="section-title">
-            <h2>من نحن</h2>
+            <h2>ℹ️ من نحن</h2>
         </div>
 
         <div class="about-box">
@@ -1389,7 +1348,7 @@
 
         <div class="section-title">
 
-            <h2>الأسئلة الشائعة</h2>
+            <h2>❓ الأسئلة الشائعة</h2>
 
             <p>
                 إجابات مختصرة عن بعض المشاكل الشائعة في أنظمة الستلايت.
@@ -1399,7 +1358,7 @@
 
         <div class="faq-item">
 
-            <h3>لماذا تختفي بعض القنوات بينما تعمل قنوات أخرى؟</h3>
+            <h3>📺 لماذا تختفي بعض القنوات بينما تعمل قنوات أخرى؟</h3>
 
             <p>
                 قد يكون السبب اختلاف الترددات أو الاستقطاب أو ضعف
@@ -1410,7 +1369,7 @@
 
         <div class="faq-item">
 
-            <h3>هل قوة الإشارة العالية تعني أن الطبق مضبوط؟</h3>
+            <h3>📶 هل قوة الإشارة العالية تعني أن الطبق مضبوط؟</h3>
 
             <p>
                 ليس بالضرورة. جودة الإشارة مهمة في تقييم استقبال
@@ -1421,7 +1380,7 @@
 
         <div class="faq-item">
 
-            <h3>لماذا تتقطع الصورة أثناء مشاهدة القنوات؟</h3>
+            <h3>⚠️ لماذا تتقطع الصورة أثناء مشاهدة القنوات؟</h3>
 
             <p>
                 يمكن أن يكون السبب ضعف جودة الإشارة أو مشكلة في الكابل
@@ -1433,7 +1392,7 @@
 
         <div class="faq-item">
 
-            <h3>هل يمكن إصلاح المشكلة دون تغيير الرسيفر؟</h3>
+            <h3>🔧 هل يمكن إصلاح المشكلة دون تغيير الرسيفر؟</h3>
 
             <p>
                 في كثير من الحالات نعم. يجب أولًا فحص التوصيلات
@@ -1457,7 +1416,7 @@
 
         <div class="section-title">
 
-            <h2>اتصل بنا</h2>
+            <h2>📞 اتصل بنا</h2>
 
             <p>
                 للاستفسارات المتعلقة بالموقع والخدمات والمحتوى.
@@ -1479,16 +1438,16 @@
                    href="https://wa.me/970592480001"
                    target="_blank"
                    rel="noopener noreferrer">
-                    واتساب
+                    💬 واتساب
                 </a>
 
                 <a class="button secondary"
                    href="mailto:n299964@hotmail.com">
-                    البريد الإلكتروني
+                    📧 البريد الإلكتروني
                 </a>
 
                 <a class="button secondary" href="contact.html">
-                    صفحة التواصل
+                    📝 صفحة التواصل
                 </a>
 
             </div>
@@ -1514,17 +1473,21 @@
 
         <div class="footer-links">
 
-            <a href="about.html">من نحن</a>
-            <a href="contact.html">اتصل بنا</a>
-            <a href="privacy.html">سياسة الخصوصية</a>
-            <a href="terms.html">الشروط والأحكام</a>
-            <a href="#aid-links">برنامج المساعدات</a>
-            <a href="#education">التعليم الإلكتروني</a>
+            <a href="about.html">ℹ️ من نحن</a>
+            <a href="contact.html">📞 اتصل بنا</a>
+            <a href="privacy.html">🔒 سياسة الخصوصية</a>
+            <a href="terms.html">📄 الشروط والأحكام</a>
+            <a href="#aid-links">🤝 برنامج المساعدات</a>
+            <a href="#education">🎓 التعليم الإلكتروني</a>
 
         </div>
 
         <div class="copyright">
             © 2026 KWAIK SAT - كويك ستلايت. جميع الحقوق محفوظة.
+        </div>
+
+        <div class="footer-author">
+            👤 AHMED KWAIK
         </div>
 
     </div>
