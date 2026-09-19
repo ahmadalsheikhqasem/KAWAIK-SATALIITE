@@ -1,778 +1,967 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>أبو كويك ساتلايت | Kawaik Satellite | الستلايت والإلكترونيات</title>
 
-    <title>كاوايك ساتلايت | تركيب وصيانة الستلايت والإلكترونيات</title>
+<meta name="description" content="أبو كويك ساتلايت - Kawaik Satellite. موقع متخصص في الستلايت وأجهزة الاستقبال والتلفزيون والإلكترونيات والشبكات، مع شروحات عملية وأدلة مفيدة للمستخدم.">
 
-    <meta name="description" content="كاوايك ساتلايت يقدم معلومات وخدمات في تركيب وضبط أطباق الستلايت وصيانة أجهزة الاستقبال والتلفزيون والإلكترونيات والشبكات.">
+<meta name="keywords" content="أبو كويك ساتلايت, كاوايك ساتلايت, Kawaik Satellite, ستلايت, تركيب دش, صيانة رسيفر, ضبط طبق, LNB, IPTV, تلفزيون, إلكترونيات, شبكات">
 
-    <meta name="keywords" content="كاوايك ساتلايت, ستلايت, تركيب دش, صيانة رسيفر, ضبط طبق, LNB, IPTV, تلفزيون, إلكترونيات, شبكات">
+<meta name="author" content="Abu Kawaik Satellite - Kawaik Satellite">
+<meta name="robots" content="index, follow">
 
-    <meta name="author" content="Kawaik Satellite">
-    <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kawaik-sataliite-a4jf.onrender.com/">
 
-    <link rel="canonical" href="https://kawaik-sataliite-a4jf.onrender.com/">
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, Tahoma, sans-serif;
+        background: #f7f8fc;
+        color: #222;
+        line-height: 1.8;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, Tahoma, sans-serif;
-            background: #f7f8fc;
-            color: #222;
-            line-height: 1.8;
-        }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    .container {
+        width: min(1120px, 92%);
+        margin: auto;
+    }
 
-        .container {
-            width: min(1120px, 92%);
-            margin: auto;
-        }
+    header {
+        background: #ffffff;
+        border-bottom: 1px solid #e7e7e7;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e7e7e7;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+    .nav {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #5b3b8c;
+        white-space: nowrap;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 17px;
+        align-items: center;
+    }
+
+    .menu a {
+        color: #333;
+        font-size: 15px;
+    }
+
+    .menu a:hover {
+        color: #6b46a1;
+    }
+
+    .hero {
+        background: linear-gradient(135deg, #eee8f8, #ffffff);
+        padding: 70px 0 80px;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 22px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #eee8f8;
+        border: 4px solid #ffffff;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .profile-fallback {
+        display: none;
+        color: #654394;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(32px, 6vw, 52px);
+        color: #4d3275;
+    }
+
+    .hero h2 {
+        margin: 0 0 20px;
+        color: #654394;
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    .hero p {
+        font-size: 19px;
+        color: #555;
+        margin: 0 auto 28px;
+        max-width: 780px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 8px;
+        background: #654394;
+        color: #ffffff;
+        font-weight: bold;
+        border: 1px solid #654394;
+        transition: 0.2s;
+    }
+
+    .button:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    .button.secondary {
+        background: #ffffff;
+        color: #654394;
+        border: 1px solid #654394;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+        color: #4d3275;
+        font-size: 32px;
+        margin: 0 0 12px;
+    }
+
+    .section-title p {
+        color: #666;
+        margin: 0;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .card {
+        background: #ffffff;
+        border: 1px solid #e7e7e7;
+        border-radius: 14px;
+        padding: 28px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+        color: #56377d;
+        margin-top: 0;
+        font-size: 21px;
+    }
+
+    .card p {
+        color: #555;
+        margin-bottom: 0;
+    }
+
+    .guide {
+        background: #ffffff;
+    }
+
+    .article {
+        background: #f8f7fb;
+        border-radius: 14px;
+        padding: 30px;
+        margin-bottom: 22px;
+        border: 1px solid #e8e4ef;
+    }
+
+    .article h3 {
+        margin-top: 0;
+        color: #56377d;
+        font-size: 24px;
+    }
+
+    .article p {
+        color: #444;
+        margin-bottom: 14px;
+    }
+
+    .article ul {
+        padding-right: 25px;
+        color: #444;
+    }
+
+    .article li {
+        margin-bottom: 7px;
+    }
+
+    .aid-section {
+        background: #f1edf7;
+    }
+
+    .aid-intro {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        background: #ffffff;
+        border: 1px solid #e5dff0;
+        border-radius: 15px;
+        padding: 28px;
+        text-align: center;
+    }
+
+    .aid-intro h3 {
+        margin-top: 0;
+        color: #56377d;
+    }
+
+    .aid-intro p {
+        color: #555;
+        margin-bottom: 0;
+    }
+
+    .aid-notice {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        padding: 18px 22px;
+        background: #faf8fd;
+        border-right: 4px solid #654394;
+        border-radius: 10px;
+        color: #555;
+    }
+
+    .aid-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .aid-card {
+        background: #ffffff;
+        border: 1px solid #e6e1ee;
+        border-radius: 14px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .aid-card h3 {
+        color: #56377d;
+        margin-top: 0;
+    }
+
+    .aid-card p {
+        color: #666;
+        font-size: 15px;
+    }
+
+    .aid-card .coming {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 14px;
+        border-radius: 7px;
+        background: #f1edf7;
+        color: #654394;
+        font-size: 14px;
+    }
+
+    .about {
+        background: #f1edf7;
+    }
+
+    .about-box {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 35px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .about-box h3 {
+        color: #56377d;
+        margin-top: 0;
+    }
+
+    .faq-item {
+        background: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        margin-bottom: 14px;
+        padding: 22px 25px;
+    }
+
+    .faq-item h3 {
+        margin: 0 0 8px;
+        color: #56377d;
+        font-size: 19px;
+    }
+
+    .faq-item p {
+        margin: 0;
+        color: #555;
+    }
+
+    .contact {
+        background: #ffffff;
+    }
+
+    .contact-box {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        background: #f8f7fb;
+        padding: 40px 25px;
+        border-radius: 15px;
+    }
+
+    .contact-box p {
+        color: #555;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    footer {
+        background: #292331;
+        color: #ffffff;
+        padding: 35px 0;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin: 15px 0;
+    }
+
+    .footer-links a {
+        color: #ddd;
+    }
+
+    .copyright {
+        color: #aaa;
+        font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+        .cards,
+        .aid-cards {
+            grid-template-columns: 1fr 1fr;
         }
 
         .nav {
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #5b3b8c;
+            flex-direction: column;
+            padding: 15px 0;
         }
 
         .menu {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: center;
+            justify-content: center;
         }
+    }
 
-        .menu a {
-            color: #333;
-            font-size: 15px;
-        }
-
-        .menu a:hover {
-            color: #6b46a1;
+    @media (max-width: 600px) {
+        .cards,
+        .aid-cards {
+            grid-template-columns: 1fr;
         }
 
         .hero {
-            background: linear-gradient(135deg, #eee8f8, #ffffff);
-            padding: 85px 0;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .hero h1 {
-            margin: 0 0 20px;
-            font-size: clamp(32px, 6vw, 52px);
-            color: #4d3275;
-        }
-
-        .hero p {
-            font-size: 19px;
-            color: #555;
-            margin: 0 auto 28px;
-            max-width: 760px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 8px;
-            background: #654394;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .button.secondary {
-            background: #ffffff;
-            color: #654394;
-            border: 1px solid #654394;
+            padding: 55px 0 60px;
         }
 
         section {
-            padding: 70px 0;
+            padding: 50px 0;
         }
 
-        .section-title {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 45px;
+        .article,
+        .about-box,
+        .card,
+        .aid-card,
+        .aid-intro {
+            padding: 22px;
         }
 
-        .section-title h2 {
-            color: #4d3275;
-            font-size: 32px;
-            margin: 0 0 12px;
+        .menu {
+            gap: 10px;
         }
 
-        .section-title p {
-            color: #666;
-            margin: 0;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e7e7e7;
-            border-radius: 14px;
-            padding: 28px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
-        }
-
-        .card h3 {
-            color: #56377d;
-            margin-top: 0;
-            font-size: 21px;
-        }
-
-        .card p {
-            color: #555;
-            margin-bottom: 0;
-        }
-
-        .guide {
-            background: #ffffff;
-        }
-
-        .article {
-            background: #f8f7fb;
-            border-radius: 14px;
-            padding: 30px;
-            margin-bottom: 22px;
-            border: 1px solid #e8e4ef;
-        }
-
-        .article h3 {
-            margin-top: 0;
-            color: #56377d;
-            font-size: 24px;
-        }
-
-        .article p {
-            color: #444;
-            margin-bottom: 14px;
-        }
-
-        .article ul {
-            padding-right: 25px;
-            color: #444;
-        }
-
-        .article li {
-            margin-bottom: 7px;
-        }
-
-        .about {
-            background: #f1edf7;
-        }
-
-        .about-box {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 35px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .about-box h3 {
-            color: #56377d;
-            margin-top: 0;
-        }
-
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            margin-bottom: 14px;
-            padding: 22px 25px;
-        }
-
-        .faq-item h3 {
-            margin: 0 0 8px;
-            color: #56377d;
-            font-size: 19px;
-        }
-
-        .faq-item p {
-            margin: 0;
-            color: #555;
-        }
-
-        .contact {
-            background: #ffffff;
-        }
-
-        .contact-box {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            background: #f8f7fb;
-            padding: 40px 25px;
-            border-radius: 15px;
-        }
-
-        .contact-box p {
-            color: #555;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        footer {
-            background: #292331;
-            color: #ffffff;
-            padding: 35px 0;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin: 15px 0;
-        }
-
-        .footer-links a {
-            color: #ddd;
-        }
-
-        .copyright {
-            color: #aaa;
+        .menu a {
             font-size: 14px;
         }
 
-        @media (max-width: 850px) {
-            .cards {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .nav {
-                flex-direction: column;
-                padding: 15px 0;
-            }
-
-            .menu {
-                justify-content: center;
-            }
+        .logo {
+            font-size: 20px;
         }
+    }
+</style>
 
-        @media (max-width: 600px) {
-            .cards {
-                grid-template-columns: 1fr;
-            }
+</head><body><header>
+    <div class="container nav">    <a href="#top" class="logo">
+        أبو كويك ساتلايت
+    </a>
 
-            .hero {
-                padding: 60px 0;
-            }
+    <nav class="menu">
+        <a href="#services">الخدمات</a>
+        <a href="#guide">الدليل</a>
+        <a href="#aid-links">المساعدات الموثوقة</a>
+        <a href="#about">من نحن</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#contact">اتصل بنا</a>
+        <a href="privacy.html">الخصوصية</a>
+    </nav>
 
-            section {
-                padding: 50px 0;
-            }
+</div>
 
-            .article,
-            .about-box,
-            .card {
-                padding: 22px;
-            }
+</header><main id="top"><section class="hero">
 
-            .menu {
-                gap: 10px;
-            }
+    <div class="container hero-content">
 
-            .menu a {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
+        <div class="profile-image">
+            <img src="profile.jpg" alt="أبو كويك ساتلايت" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="profile-fallback">أ</span>
+        </div>
 
-<body>
+        <h1>أبو كويك ساتلايت</h1>
 
-<header>
-    <div class="container nav">
+        <h2>Kawaik Satellite</h2>
 
-        <a href="#top" class="logo">
-            كاوايك ساتلايت
-        </a>
+        <p>
+            موقع متخصص في معلومات وخدمات الستلايت وأجهزة الاستقبال
+            والتلفزيون والإلكترونيات والشبكات، مع تقديم شروحات عملية
+            تساعد المستخدم على فهم مشاكل أنظمة الاستقبال وتشخيصها.
+        </p>
 
-        <nav class="menu">
-            <a href="#services">الخدمات</a>
-            <a href="#guide">الدليل</a>
-            <a href="#about">من نحن</a>
-            <a href="#faq">الأسئلة الشائعة</a>
-            <a href="#contact">اتصل بنا</a>
-            <a href="privacy.html">الخصوصية</a>
-        </nav>
+        <div class="buttons">
+
+            <a class="button" href="#services">
+                تعرف على الخدمات
+            </a>
+
+            <a class="button secondary" href="#guide">
+                اقرأ الدليل
+            </a>
+
+            <a class="button secondary" href="#aid-links">
+                روابط المساعدات الرسمية والموثوقة في غزة
+            </a>
+
+        </div>
 
     </div>
-</header>
 
-<main id="top">
+</section>
 
-    <section class="hero">
+<section id="services">
 
-        <div class="container hero-content">
+    <div class="container">
 
-            <h1>كاوايك ساتلايت</h1>
+        <div class="section-title">
+
+            <h2>خدمات أبو كويك ساتلايت</h2>
 
             <p>
-                موقع متخصص في معلومات وخدمات الستلايت وأجهزة الاستقبال
-                والتلفزيون والإلكترونيات والشبكات، مع تقديم شروحات عملية
-                تساعد المستخدم على فهم مشاكل أنظمة الاستقبال وتشخيصها.
+                مجالات مرتبطة بأنظمة الاستقبال والتلفزيون
+                والإلكترونيات والشبكات.
             </p>
 
-            <div class="buttons">
-
-                <a class="button" href="#services">
-                    تعرف على الخدمات
-                </a>
-
-                <a class="button secondary" href="#guide">
-                    اقرأ الدليل
-                </a>
-
-            </div>
-
         </div>
 
-    </section>
+        <div class="cards">
 
-    <section id="services">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>خدمات كاوايك ساتلايت</h2>
-
+            <div class="card">
+                <h3>تركيب أطباق الستلايت</h3>
                 <p>
-                    مجالات مرتبطة بأنظمة الاستقبال والتلفزيون
-                    والإلكترونيات والشبكات.
+                    تركيب أطباق الاستقبال وتثبيتها وضبط الاتجاه
+                    والاستقطاب وفحص جودة الإشارة.
                 </p>
-
             </div>
 
-            <div class="cards">
-
-                <div class="card">
-                    <h3>تركيب أطباق الستلايت</h3>
-                    <p>
-                        تركيب أطباق الاستقبال وتثبيتها وضبط الاتجاه
-                        والاستقطاب وفحص جودة الإشارة.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>ضبط الإشارة</h3>
-                    <p>
-                        فحص قوة وجودة الإشارة وتشخيص أسباب ضعف
-                        الاستقبال أو انقطاع بعض القنوات.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>أجهزة الاستقبال</h3>
-                    <p>
-                        إعداد أجهزة الرسيفر وفحص التوصيلات وإعدادات
-                        الأقمار والترددات والقنوات.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>صيانة التلفزيون</h3>
-                    <p>
-                        معلومات حول تشخيص بعض أعطال أجهزة LCD وLED
-                        ومشاكل الصورة والصوت ومصادر الإشارة.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>الشبكات والكابلات</h3>
-                    <p>
-                        تنظيم وتمديد كابلات الشبكات والإشارة وفحص
-                        التوصيلات المستخدمة في أنظمة التلفزيون والاستقبال.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>الإلكترونيات</h3>
-                    <p>
-                        شروحات ومعلومات عملية حول بعض الدوائر والأجهزة
-                        الإلكترونية المستخدمة في المنزل.
-                    </p>
-                </div>
-
+            <div class="card">
+                <h3>ضبط الإشارة</h3>
+                <p>
+                    فحص قوة وجودة الإشارة وتشخيص أسباب ضعف
+                    الاستقبال أو انقطاع بعض القنوات.
+                </p>
             </div>
 
-        </div>
-
-    </section>
-
-    <section id="guide" class="guide">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>دليل الستلايت والإلكترونيات</h2>
-
+            <div class="card">
+                <h3>أجهزة الاستقبال</h3>
                 <p>
-                    معلومات عملية مبسطة لمساعدة المستخدم على فهم
-                    أنظمة الاستقبال وتشخيص المشاكل الشائعة.
+                    إعداد أجهزة الرسيفر وفحص التوصيلات وإعدادات
+                    الأقمار والترددات والقنوات.
                 </p>
-
             </div>
 
-            <article class="article">
-
-                <h3>كيف تختار طبق الستلايت المناسب؟</h3>
-
+            <div class="card">
+                <h3>صيانة التلفزيون</h3>
                 <p>
-                    يعتمد اختيار حجم طبق الستلايت على القمر الصناعي الذي
-                    تريد استقبال إشاراته وموقع التركيب وقوة الإشارة في
-                    المنطقة. لذلك لا يوجد مقاس واحد مناسب لجميع الحالات.
+                    معلومات حول تشخيص بعض أعطال أجهزة LCD وLED
+                    ومشاكل الصورة والصوت ومصادر الإشارة.
                 </p>
-
-                <p>
-                    قبل تركيب الطبق يجب تحديد القمر المطلوب والتأكد من
-                    وجود مجال رؤية مناسب باتجاه القمر واختيار مكان ثابت
-                    للطبق بعيدًا عن العوائق قدر الإمكان.
-                </p>
-
-            </article>
-
-            <article class="article">
-
-                <h3>الفرق بين قوة الإشارة وجودة الإشارة</h3>
-
-                <p>
-                    تعرض أجهزة الاستقبال عادة مؤشرين للإشارة: القوة والجودة.
-                    ارتفاع قوة الإشارة وحده لا يعني بالضرورة أن استقبال
-                    القنوات سيكون جيدًا.
-                </p>
-
-                <p>
-                    جودة الإشارة ترتبط بمدى صحة استقبال التردد المطلوب،
-                    ولذلك عند حدوث تقطع أو اختفاء القنوات يجب فحص الاتجاه
-                    والتردد والاستقطاب والـ LNB والكابل.
-                </p>
-
-            </article>
-
-            <article class="article">
-
-                <h3>أسباب ضعف أو انقطاع إشارة الستلايت</h3>
-
-                <ul>
-
-                    <li>تحرك طبق الاستقبال من مكانه.</li>
-                    <li>وجود عائق أمام الطبق.</li>
-                    <li>وجود مشكلة في وحدة LNB.</li>
-                    <li>تلف كابل الإشارة أو الموصلات.</li>
-                    <li>دخول المياه أو الرطوبة إلى الوصلات الخارجية.</li>
-                    <li>عدم ضبط الطبق بصورة دقيقة.</li>
-                    <li>وجود مشكلة في إعدادات جهاز الاستقبال.</li>
-
-                </ul>
-
-            </article>
-
-            <article class="article">
-
-                <h3>خطوات فحص جهاز الرسيفر عند عدم وجود صورة</h3>
-
-                <p>
-                    عند توقف الصورة، ابدأ بفحص مصدر الكهرباء والتأكد من أن
-                    الجهاز يعمل بصورة طبيعية. بعد ذلك افحص كابل HDMI أو
-                    كابل الصورة المستخدم في توصيل الجهاز بالتلفزيون.
-                </p>
-
-                <p>
-                    إذا كان الجهاز يعمل ولكن لا توجد إشارة، افحص كابل
-                    الستلايت والـ LNB ثم راجع إعدادات القمر والتردد
-                    والاستقطاب.
-                </p>
-
-                <p>
-                    من الأفضل تشخيص سبب العطل قبل شراء قطعة جديدة، لأن
-                    المشكلة قد تكون في الكابل أو التوصيلات أو الإعدادات.
-                </p>
-
-            </article>
-
-            <article class="article">
-
-                <h3>نصائح للحفاظ على نظام الستلايت</h3>
-
-                <p>
-                    يفضل فحص الوصلات الخارجية بشكل دوري والتأكد من عدم
-                    وجود صدأ أو مياه داخل الموصلات. كما يجب تثبيت الكابل
-                    بحيث لا يتعرض للشد المباشر على وحدة LNB.
-                </p>
-
-                <p>
-                    ثبات حامل الطبق مهم أيضًا، لأن حركة الطبق الصغيرة
-                    قد تؤثر على جودة الإشارة وتؤدي إلى تقطع بعض القنوات.
-                </p>
-
-            </article>
-
-            <article class="article">
-
-                <h3>ما هو IPTV؟</h3>
-
-                <p>
-                    IPTV هو نظام لنقل المحتوى التلفزيوني عبر شبكات الإنترنت
-                    أو الشبكات المحلية بدلًا من الاعتماد فقط على استقبال
-                    الإشارة من القمر الصناعي.
-                </p>
-
-                <p>
-                    يعتمد أداء خدمات IPTV على جودة الشبكة واستقرار الاتصال
-                    والخدمة المستخدمة. لذلك قد يكون ضعف الإنترنت سببًا
-                    في التقطع حتى عندما يكون جهاز المستخدم سليمًا.
-                </p>
-
-            </article>
-
-            <article class="article">
-
-                <h3>متى تحتاج إلى فني؟</h3>
-
-                <p>
-                    إذا تم فحص الكابلات والتوصيلات وإعدادات الجهاز ولم يتم
-                    تحديد سبب المشكلة، فقد يكون من الأفضل الاستعانة بفني
-                    لديه أدوات قياس الإشارة وفحص المكونات.
-                </p>
-
-                <p>
-                    ينبغي توخي الحذر عند التعامل مع الأجهزة الكهربائية
-                    ومصادر الطاقة وعدم فتح الأجهزة المتصلة بالكهرباء
-                    إذا لم تكن لديك الخبرة اللازمة.
-                </p>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <section id="about" class="about">
-
-        <div class="container">
-
-            <div class="section-title">
-                <h2>من نحن</h2>
             </div>
 
-            <div class="about-box">
-
-                <h3>كاوايك ساتلايت والإلكترونيات</h3>
-
+            <div class="card">
+                <h3>الشبكات والكابلات</h3>
                 <p>
-                    كاوايك ساتلايت هو موقع يهتم بمجال أنظمة استقبال
-                    القنوات الفضائية والتلفزيون الرقمي والإلكترونيات
-                    والشبكات.
+                    تنظيم وتمديد كابلات الشبكات والإشارة وفحص
+                    التوصيلات المستخدمة في أنظمة التلفزيون والاستقبال.
                 </p>
-
-                <p>
-                    يعتمد الموقع على الخبرة العملية في تركيب وصيانة أجهزة
-                    الاستقبال والتلفزيون والأنظمة الإلكترونية، ويهدف إلى
-                    تقديم معلومات مفهومة للمستخدمين حول المشاكل الشائعة
-                    وطرق تشخيصها.
-                </p>
-
-                <p>
-                    نعمل على تطوير المحتوى باستمرار وإضافة شروحات ومعلومات
-                    جديدة تساعد الزائر على فهم الأجهزة والخدمات التي يستخدمها.
-                </p>
-
             </div>
 
-        </div>
-
-    </section>
-
-    <section id="faq">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>الأسئلة الشائعة</h2>
-
+            <div class="card">
+                <h3>الإلكترونيات</h3>
                 <p>
-                    إجابات مختصرة عن بعض المشاكل الشائعة في أنظمة الستلايت.
+                    شروحات ومعلومات عملية حول بعض الدوائر والأجهزة
+                    الإلكترونية المستخدمة في المنزل.
                 </p>
-
             </div>
 
-            <div class="faq-item">
-
-                <h3>لماذا تختفي بعض القنوات بينما تعمل قنوات أخرى؟</h3>
-
-                <p>
-                    قد يكون السبب اختلاف الترددات أو الاستقطاب أو ضعف
-                    جودة الإشارة. يجب فحص جودة الإشارة على التردد المتأثر.
-                </p>
-
-            </div>
-
-            <div class="faq-item">
-
-                <h3>هل قوة الإشارة العالية تعني أن الطبق مضبوط؟</h3>
-
-                <p>
-                    ليس بالضرورة. جودة الإشارة مهمة في تقييم استقبال
-                    التردد المطلوب، ولذلك يجب النظر إلى القوة والجودة معًا.
-                </p>
-
-            </div>
-
-            <div class="faq-item">
-
-                <h3>لماذا تتقطع الصورة أثناء مشاهدة القنوات؟</h3>
-
-                <p>
-                    يمكن أن يكون السبب ضعف جودة الإشارة أو مشكلة في الكابل
-                    أو الـ LNB أو تحرك الطبق. وفي خدمات IPTV قد يكون السبب
-                    ضعف أو عدم استقرار اتصال الإنترنت.
-                </p>
-
-            </div>
-
-            <div class="faq-item">
-
-                <h3>هل يمكن إصلاح المشكلة دون تغيير الرسيفر؟</h3>
-
-                <p>
-                    في كثير من الحالات نعم. يجب أولًا فحص التوصيلات
-                    والإعدادات وكابل الإشارة وجودة الاستقبال قبل استبدال الجهاز.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="contact" class="contact">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>اتصل بنا</h2>
-
-                <p>
-                    للاستفسارات المتعلقة بالموقع والخدمات والمحتوى،
-                    يمكنك التواصل معنا من خلال صفحة الاتصال.
-                </p>
-
-            </div>
-
-            <div class="contact-box">
-
-                <p>
-                    يسعدنا استقبال الاستفسارات والملاحظات والاقتراحات
-                    المتعلقة بمحتوى الموقع وخدمات الستلايت والإلكترونيات.
-                </p>
-
-                <div class="contact-links">
-
-                    <a class="button" href="contact.html">
-                        صفحة التواصل
-                    </a>
-
-                    <a class="button secondary" href="about.html">
-                        تعرف علينا
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <div class="container footer-content">
-
-        <strong>كاوايك ساتلايت</strong>
-
-        <div class="footer-links">
-
-            <a href="about.html">من نحن</a>
-            <a href="contact.html">اتصل بنا</a>
-            <a href="privacy.html">سياسة الخصوصية</a>
-            <a href="terms.html">الشروط والأحكام</a>
-
-        </div>
-
-        <div class="copyright">
-            © 2026 Kawaik Satellite. جميع الحقوق محفوظة.
         </div>
 
     </div>
 
-</footer>
+</section>
 
-</body>
+<section id="guide" class="guide">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>دليل الستلايت والإلكترونيات</h2>
+
+            <p>
+                معلومات عملية مبسطة لمساعدة المستخدم على فهم
+                أنظمة الاستقبال وتشخيص المشاكل الشائعة.
+            </p>
+
+        </div>
+
+        <article class="article">
+
+            <h3>كيف تختار طبق الستلايت المناسب؟</h3>
+
+            <p>
+                يعتمد اختيار حجم طبق الستلايت على القمر الصناعي الذي
+                تريد استقبال إشاراته وموقع التركيب وقوة الإشارة في
+                المنطقة. لذلك لا يوجد مقاس واحد مناسب لجميع الحالات.
+            </p>
+
+            <p>
+                قبل تركيب الطبق يجب تحديد القمر المطلوب والتأكد من
+                وجود مجال رؤية مناسب باتجاه القمر واختيار مكان ثابت
+                للطبق بعيدًا عن العوائق قدر الإمكان.
+            </p>
+
+        </article>
+
+        <article class="article">
+
+            <h3>الفرق بين قوة الإشارة وجودة الإشارة</h3>
+
+            <p>
+                تعرض أجهزة الاستقبال عادة مؤشرين للإشارة: القوة والجودة.
+                ارتفاع قوة الإشارة وحده لا يعني بالضرورة أن استقبال
+                القنوات سيكون جيدًا.
+            </p>
+
+            <p>
+                جودة الإشارة ترتبط بمدى صحة استقبال التردد المطلوب،
+                ولذلك عند حدوث تقطع أو اختفاء القنوات يجب فحص الاتجاه
+                والتردد والاستقطاب والـ LNB والكابل.
+            </p>
+
+        </article>
+
+        <article class="article">
+
+            <h3>أسباب ضعف أو انقطاع إشارة الستلايت</h3>
+
+            <ul>
+                <li>تحرك طبق الاستقبال من مكانه.</li>
+                <li>وجود عائق أمام الطبق.</li>
+                <li>وجود مشكلة في وحدة LNB.</li>
+                <li>تلف كابل الإشارة أو الموصلات.</li>
+                <li>دخول المياه أو الرطوبة إلى الوصلات الخارجية.</li>
+                <li>عدم ضبط الطبق بصورة دقيقة.</li>
+                <li>وجود مشكلة في إعدادات جهاز الاستقبال.</li>
+            </ul>
+
+        </article>
+
+        <article class="article">
+
+            <h3>خطوات فحص جهاز الرسيفر عند عدم وجود صورة</h3>
+
+            <p>
+                عند توقف الصورة، ابدأ بفحص مصدر الكهرباء والتأكد من أن
+                الجهاز يعمل بصورة طبيعية. بعد ذلك افحص كابل HDMI أو
+                كابل الصورة المستخدم في توصيل الجهاز بالتلفزيون.
+            </p>
+
+            <p>
+                إذا كان الجهاز يعمل ولكن لا توجد إشارة، افحص كابل
+                الستلايت والـ LNB ثم راجع إعدادات القمر والتردد
+                والاستقطاب.
+            </p>
+
+            <p>
+                من الأفضل تشخيص سبب العطل قبل شراء قطعة جديدة، لأن
+                المشكلة قد تكون في الكابل أو التوصيلات أو الإعدادات.
+            </p>
+
+        </article>
+
+        <article class="article">
+
+            <h3>نصائح للحفاظ على نظام الستلايت</h3>
+
+            <p>
+                يفضل فحص الوصلات الخارجية بشكل دوري والتأكد من عدم
+                وجود صدأ أو مياه داخل الموصلات. كما يجب تثبيت الكابل
+                بحيث لا يتعرض للشد المباشر على وحدة LNB.
+            </p>
+
+            <p>
+                ثبات حامل الطبق مهم أيضًا، لأن حركة الطبق الصغيرة
+                قد تؤثر على جودة الإشارة وتؤدي إلى تقطع بعض القنوات.
+            </p>
+
+        </article>
+
+        <article class="article">
+
+            <h3>ما هو IPTV؟</h3>
+
+            <p>
+                IPTV هو نظام لنقل المحتوى التلفزيوني عبر شبكات الإنترنت
+                أو الشبكات المحلية بدلًا من الاعتماد فقط على استقبال
+                الإشارة من القمر الصناعي.
+            </p>
+
+            <p>
+                يعتمد أداء خدمات IPTV على جودة الشبكة واستقرار الاتصال
+                والخدمة المستخدمة. لذلك قد يكون ضعف الإنترنت سببًا
+                في التقطع حتى عندما يكون جهاز المستخدم سليمًا.
+            </p>
+
+        </article>
+
+        <article class="article">
+
+            <h3>متى تحتاج إلى فني؟</h3>
+
+            <p>
+                إذا تم فحص الكابلات والتوصيلات وإعدادات الجهاز ولم يتم
+                تحديد سبب المشكلة، فقد يكون من الأفضل الاستعانة بفني
+                لديه أدوات قياس الإشارة وفحص المكونات.
+            </p>
+
+            <p>
+                ينبغي توخي الحذر عند التعامل مع الأجهزة الكهربائية
+                ومصادر الطاقة وعدم فتح الأجهزة المتصلة بالكهرباء
+                إذا لم تكن لديك الخبرة اللازمة.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="aid-links" class="aid-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>روابط المساعدات الرسمية والموثوقة في غزة</h2>
+
+            <p>
+                دليل مقترح للوصول إلى صفحات ومصادر المساعدات الرسمية
+                التي سيتم التحقق من روابطها قبل إضافتها إلى الموقع.
+            </p>
+
+        </div>
+
+        <div class="aid-intro">
+
+            <h3>دليل المساعدات الإنسانية</h3>
+
+            <p>
+                يهدف هذا القسم إلى مساعدة الزوار في الوصول إلى المصادر
+                الرسمية للمؤسسات والمنظمات الإنسانية، وتسهيل الوصول إلى
+                المعلومات المنشورة من الجهات نفسها.
+            </p>
+
+        </div>
+
+        <div class="aid-notice">
+            <strong>تنبيه مهم:</strong>
+            أبو كويك ساتلايت ليس مؤسسة إغاثية ولا يمثل أي منظمة أو جهة
+            مانحة. الروابط التي ستتم إضافتها في هذا القسم ستكون روابط
+            خارجية لمصادر رسمية، وينبغي دائمًا التأكد من شروط التسجيل
+            والأهلية من الجهة نفسها.
+        </div>
+
+        <div class="aid-cards">
+
+            <div class="aid-card">
+                <h3>الأمم المتحدة والمنظمات الإنسانية</h3>
+                <p>
+                    روابط رسمية لمواقع وصفحات المؤسسات الإنسانية التابعة
+                    للأمم المتحدة أو الجهات الدولية المعروفة بعد التحقق منها.
+                </p>
+                <span class="coming">سيتم إضافة الروابط الموثقة</span>
+            </div>
+
+            <div class="aid-card">
+                <h3>المساعدات الغذائية والنقدية</h3>
+                <p>
+                    مصادر رسمية للمعلومات المتعلقة ببرامج الغذاء
+                    والمساعدات النقدية والدعم الإنساني.
+                </p>
+                <span class="coming">سيتم إضافة الروابط الموثقة</span>
+            </div>
+
+            <div class="aid-card">
+                <h3>الخدمات الإنسانية والصحية</h3>
+                <p>
+                    مصادر رسمية للمؤسسات التي تقدم خدمات إنسانية أو صحية
+                    وبرامج دعم في قطاع غزة.
+                </p>
+                <span class="coming">سيتم إضافة الروابط الموثقة</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>من نحن</h2>
+        </div>
+
+        <div class="about-box">
+
+            <h3>أبو كويك ساتلايت – Kawaik Satellite</h3>
+
+            <p>
+                أبو كويك ساتلايت هو موقع متخصص في مجال أنظمة استقبال
+                القنوات الفضائية والتلفزيون الرقمي والإلكترونيات
+                والشبكات.
+            </p>
+
+            <p>
+                يهدف الموقع إلى تقديم معلومات وشروحات عملية ومبسطة
+                تساعد المستخدم على فهم الأجهزة والمشاكل الشائعة
+                وطرق التشخيص الأولية.
+            </p>
+
+            <p>
+                يتم تطوير محتوى الموقع باستمرار وإضافة معلومات جديدة
+                حول الستلايت وأجهزة الاستقبال والتلفزيون والإلكترونيات
+                والشبكات.
+            </p>
+
+            <p>
+                كما يتضمن الموقع دليلًا مستقلًا للوصول إلى بعض المصادر
+                الإنسانية الرسمية، مع توضيح أن هذه الروابط خارجية وأن
+                الموقع لا يمثل المؤسسات التي تنشرها.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>الأسئلة الشائعة</h2>
+
+            <p>
+                إجابات مختصرة عن بعض المشاكل الشائعة في أنظمة الستلايت.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>لماذا تختفي بعض القنوات بينما تعمل قنوات أخرى؟</h3>
+
+            <p>
+                قد يكون السبب اختلاف الترددات أو الاستقطاب أو ضعف
+                جودة الإشارة. يجب فحص جودة الإشارة على التردد المتأثر.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>هل قوة الإشارة العالية تعني أن الطبق مضبوط؟</h3>
+
+            <p>
+                ليس بالضرورة. جودة الإشارة مهمة في تقييم استقبال
+                التردد المطلوب، ولذلك يجب النظر إلى القوة والجودة معًا.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>لماذا تتقطع الصورة أثناء مشاهدة القنوات؟</h3>
+
+            <p>
+                يمكن أن يكون السبب ضعف جودة الإشارة أو مشكلة في الكابل
+                أو الـ LNB أو تحرك الطبق. وفي خدمات IPTV قد يكون السبب
+                ضعف أو عدم استقرار اتصال الإنترنت.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>هل يمكن إصلاح المشكلة دون تغيير الرسيفر؟</h3>
+
+            <p>
+                في كثير من الحالات نعم. يجب أولًا فحص التوصيلات
+                والإعدادات وكابل الإشارة وجودة الاستقبال قبل استبدال الجهاز.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>اتصل بنا</h2>
+
+            <p>
+                للاستفسارات المتعلقة بالموقع والخدمات والمحتوى،
+                يمكنك التواصل معنا من خلال صفحة الاتصال.
+            </p>
+
+        </div>
+
+        <div class="contact-box">
+
+            <p>
+                يسعدنا استقبال الاستفسارات والملاحظات والاقتراحات
+                المتعلقة بمحتوى الموقع وخدمات الستلايت والإلكترونيات.
+            </p>
+
+            <div class="contact-links">
+
+                <a class="button" href="contact.html">
+                    صفحة التواصل
+                </a>
+
+                <a class="button secondary" href="about.html">
+                    تعرف علينا
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main><footer><div class="container footer-content">
+
+    <strong>أبو كويك ساتلايت – Kawaik Satellite</strong>
+
+    <div class="footer-links">
+
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="terms.html">الشروط والأحكام</a>
+        <a href="#aid-links">المساعدات الرسمية والموثوقة</a>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Abu Kawaik Satellite - Kawaik Satellite. جميع الحقوق محفوظة.
+    </div>
+
+</div>
+
+</footer></body>
 </html>
