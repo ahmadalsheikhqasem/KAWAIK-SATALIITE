@@ -1,488 +1,525 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>أبو كويك ساتلايت | Kawaik Satellite | الستلايت والإلكترونيات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="أبو كويك ساتلايت - Kawaik Satellite. موقع متخصص في الستلايت وأجهزة الاستقبال والتلفزيون والإلكترونيات والشبكات، مع شروحات عملية وأدلة مفيدة للمستخدم.">
+    <title>KWAIK SAT | كويك ستلايت | الستلايت والإلكترونيات</title>
 
-<meta name="keywords" content="أبو كويك ساتلايت, كاوايك ساتلايت, Kawaik Satellite, ستلايت, تركيب دش, صيانة رسيفر, ضبط طبق, LNB, IPTV, تلفزيون, إلكترونيات, شبكات">
+    <meta name="description" content="KWAIK SAT - كويك ستلايت. موقع متخصص في الستلايت وأجهزة الاستقبال والتلفزيون والإلكترونيات والشبكات، مع شروحات عملية وأدلة مفيدة للمستخدم.">
 
-<meta name="author" content="Abu Kawaik Satellite - Kawaik Satellite">
-<meta name="robots" content="index, follow">
+    <meta name="keywords" content="KWAIK SAT, كويك ستلايت, أبو كويك ساتلايت, Kawaik Satellite, ستلايت, تركيب دش, صيانة رسيفر, ضبط طبق, LNB, IPTV, تلفزيون, إلكترونيات, شبكات">
 
-<link rel="canonical" href="https://kawaik-sataliite-a4jf.onrender.com/">
+    <meta name="author" content="KWAIK SAT - كويك ستلايت">
+    <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://kawaik-sataliite-a4jf.onrender.com/">
 
-<style>
-    * {
-        box-sizing: border-box;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-        margin: 0;
-        font-family: Arial, Tahoma, sans-serif;
-        background: #f7f8fc;
-        color: #222;
-        line-height: 1.8;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f7f8fc;
+            color: #222;
+            line-height: 1.8;
+        }
 
-    .container {
-        width: min(1120px, 92%);
-        margin: auto;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    header {
-        background: #ffffff;
-        border-bottom: 1px solid #e7e7e7;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
 
-    .nav {
-        min-height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-        color: #5b3b8c;
-        white-space: nowrap;
-    }
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 17px;
-        align-items: center;
-    }
-
-    .menu a {
-        color: #333;
-        font-size: 15px;
-    }
-
-    .menu a:hover {
-        color: #6b46a1;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, #eee8f8, #ffffff);
-        padding: 70px 0 80px;
-    }
-
-    .hero-content {
-        max-width: 900px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 22px;
-        border-radius: 50%;
-        overflow: hidden;
-        background: #eee8f8;
-        border: 4px solid #ffffff;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .profile-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-    .profile-fallback {
-        display: none;
-        color: #654394;
-        font-size: 35px;
-        font-weight: bold;
-    }
-
-    .hero h1 {
-        margin: 0 0 10px;
-        font-size: clamp(32px, 6vw, 52px);
-        color: #4d3275;
-    }
-
-    .hero h2 {
-        margin: 0 0 20px;
-        color: #654394;
-        font-size: 22px;
-        font-weight: normal;
-    }
-
-    .hero p {
-        font-size: 19px;
-        color: #555;
-        margin: 0 auto 28px;
-        max-width: 780px;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 12px 24px;
-        border-radius: 8px;
-        background: #654394;
-        color: #ffffff;
-        font-weight: bold;
-        border: 1px solid #654394;
-        transition: 0.2s;
-    }
-
-    .button:hover {
-        opacity: 0.9;
-        transform: translateY(-1px);
-    }
-
-    .button.secondary {
-        background: #ffffff;
-        color: #654394;
-        border: 1px solid #654394;
-    }
-
-    section {
-        padding: 70px 0;
-    }
-
-    .section-title {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 45px;
-    }
-
-    .section-title h2 {
-        color: #4d3275;
-        font-size: 32px;
-        margin: 0 0 12px;
-    }
-
-    .section-title p {
-        color: #666;
-        margin: 0;
-    }
-
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-    }
-
-    .card {
-        background: #ffffff;
-        border: 1px solid #e7e7e7;
-        border-radius: 14px;
-        padding: 28px;
-        box-shadow: 0 4px 18px rgba(0,0,0,0.04);
-    }
-
-    .card h3 {
-        color: #56377d;
-        margin-top: 0;
-        font-size: 21px;
-    }
-
-    .card p {
-        color: #555;
-        margin-bottom: 0;
-    }
-
-    .guide {
-        background: #ffffff;
-    }
-
-    .article {
-        background: #f8f7fb;
-        border-radius: 14px;
-        padding: 30px;
-        margin-bottom: 22px;
-        border: 1px solid #e8e4ef;
-    }
-
-    .article h3 {
-        margin-top: 0;
-        color: #56377d;
-        font-size: 24px;
-    }
-
-    .article p {
-        color: #444;
-        margin-bottom: 14px;
-    }
-
-    .article ul {
-        padding-right: 25px;
-        color: #444;
-    }
-
-    .article li {
-        margin-bottom: 7px;
-    }
-
-    .aid-section {
-        background: #f1edf7;
-    }
-
-    .aid-intro {
-        max-width: 900px;
-        margin: 0 auto 30px;
-        background: #ffffff;
-        border: 1px solid #e5dff0;
-        border-radius: 15px;
-        padding: 28px;
-        text-align: center;
-    }
-
-    .aid-intro h3 {
-        margin-top: 0;
-        color: #56377d;
-    }
-
-    .aid-intro p {
-        color: #555;
-        margin-bottom: 0;
-    }
-
-    .aid-notice {
-        max-width: 900px;
-        margin: 0 auto 30px;
-        padding: 18px 22px;
-        background: #faf8fd;
-        border-right: 4px solid #654394;
-        border-radius: 10px;
-        color: #555;
-    }
-
-    .aid-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .aid-card {
-        background: #ffffff;
-        border: 1px solid #e6e1ee;
-        border-radius: 14px;
-        padding: 25px;
-        text-align: center;
-    }
-
-    .aid-card h3 {
-        color: #56377d;
-        margin-top: 0;
-    }
-
-    .aid-card p {
-        color: #666;
-        font-size: 15px;
-    }
-
-    .aid-card .coming {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 8px 14px;
-        border-radius: 7px;
-        background: #f1edf7;
-        color: #654394;
-        font-size: 14px;
-    }
-
-    .about {
-        background: #f1edf7;
-    }
-
-    .about-box {
-        background: #ffffff;
-        border-radius: 15px;
-        padding: 35px;
-        max-width: 900px;
-        margin: auto;
-    }
-
-    .about-box h3 {
-        color: #56377d;
-        margin-top: 0;
-    }
-
-    .faq-item {
-        background: #ffffff;
-        border: 1px solid #e5e5e5;
-        border-radius: 12px;
-        margin-bottom: 14px;
-        padding: 22px 25px;
-    }
-
-    .faq-item h3 {
-        margin: 0 0 8px;
-        color: #56377d;
-        font-size: 19px;
-    }
-
-    .faq-item p {
-        margin: 0;
-        color: #555;
-    }
-
-    .contact {
-        background: #ffffff;
-    }
-
-    .contact-box {
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-        background: #f8f7fb;
-        padding: 40px 25px;
-        border-radius: 15px;
-    }
-
-    .contact-box p {
-        color: #555;
-    }
-
-    .contact-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 25px;
-    }
-
-    footer {
-        background: #292331;
-        color: #ffffff;
-        padding: 35px 0;
-    }
-
-    .footer-content {
-        text-align: center;
-    }
-
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
-        margin: 15px 0;
-    }
-
-    .footer-links a {
-        color: #ddd;
-    }
-
-    .copyright {
-        color: #aaa;
-        font-size: 14px;
-    }
-
-    @media (max-width: 850px) {
-        .cards,
-        .aid-cards {
-            grid-template-columns: 1fr 1fr;
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e7e7e7;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav {
-            flex-direction: column;
-            padding: 15px 0;
-        }
-
-        .menu {
-            justify-content: center;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .cards,
-        .aid-cards {
-            grid-template-columns: 1fr;
-        }
-
-        .hero {
-            padding: 55px 0 60px;
-        }
-
-        section {
-            padding: 50px 0;
-        }
-
-        .article,
-        .about-box,
-        .card,
-        .aid-card,
-        .aid-intro {
-            padding: 22px;
-        }
-
-        .menu {
-            gap: 10px;
-        }
-
-        .menu a {
-            font-size: 14px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5b3b8c;
+            white-space: nowrap;
         }
-    }
-</style>
 
-</head><body><header>
-    <div class="container nav">    <a href="#top" class="logo">
-        أبو كويك ساتلايت
-    </a>
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 17px;
+            align-items: center;
+        }
 
-    <nav class="menu">
-        <a href="#services">الخدمات</a>
-        <a href="#guide">الدليل</a>
-        <a href="#aid-links">المساعدات الموثوقة</a>
-        <a href="#about">من نحن</a>
-        <a href="#faq">الأسئلة الشائعة</a>
-        <a href="#contact">اتصل بنا</a>
-        <a href="privacy.html">الخصوصية</a>
-    </nav>
+        .menu a {
+            color: #333;
+            font-size: 15px;
+        }
 
-</div>
+        .menu a:hover {
+            color: #6b46a1;
+        }
 
-</header><main id="top"><section class="hero">
+        .hero {
+            background: linear-gradient(135deg, #eee8f8, #ffffff);
+            padding: 70px 0 80px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #eee8f8;
+            border: 4px solid #ffffff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-fallback {
+            display: none;
+            color: #654394;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(32px, 6vw, 52px);
+            color: #4d3275;
+        }
+
+        .hero h2 {
+            margin: 0 0 20px;
+            color: #654394;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #555;
+            margin: 0 auto 28px;
+            max-width: 780px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: #654394;
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #654394;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .button.secondary {
+            background: #ffffff;
+            color: #654394;
+            border: 1px solid #654394;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 45px;
+        }
+
+        .section-title h2 {
+            color: #4d3275;
+            font-size: 32px;
+            margin: 0 0 12px;
+        }
+
+        .section-title p {
+            color: #666;
+            margin: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e7e7e7;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+        }
+
+        .card h3 {
+            color: #56377d;
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .guide {
+            background: #ffffff;
+        }
+
+        .article {
+            background: #f8f7fb;
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 22px;
+            border: 1px solid #e8e4ef;
+        }
+
+        .article h3 {
+            margin-top: 0;
+            color: #56377d;
+            font-size: 24px;
+        }
+
+        .article p {
+            color: #444;
+            margin-bottom: 14px;
+        }
+
+        .article ul {
+            padding-right: 25px;
+            color: #444;
+        }
+
+        .article li {
+            margin-bottom: 7px;
+        }
+
+        .aid-section {
+            background: #f1edf7;
+        }
+
+        .aid-intro {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            background: #ffffff;
+            border: 1px solid #e5dff0;
+            border-radius: 15px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .aid-intro h3 {
+            margin-top: 0;
+            color: #56377d;
+        }
+
+        .aid-intro p {
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .aid-notice {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            padding: 18px 22px;
+            background: #faf8fd;
+            border-right: 4px solid #654394;
+            border-radius: 10px;
+            color: #555;
+        }
+
+        .aid-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .aid-card {
+            background: #ffffff;
+            border: 1px solid #e6e1ee;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .aid-card h3 {
+            color: #56377d;
+            margin-top: 0;
+        }
+
+        .aid-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .aid-card .coming {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            border-radius: 7px;
+            background: #f1edf7;
+            color: #654394;
+            font-size: 14px;
+        }
+
+        .about {
+            background: #f1edf7;
+        }
+
+        .about-box {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 35px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .about-box h3 {
+            color: #56377d;
+            margin-top: 0;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            padding: 22px 25px;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 8px;
+            color: #56377d;
+            font-size: 19px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        .contact {
+            background: #ffffff;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            background: #f8f7fb;
+            padding: 40px 25px;
+            border-radius: 15px;
+        }
+
+        .contact-box p {
+            color: #555;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        footer {
+            background: #292331;
+            color: #ffffff;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: #ddd;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* إصلاح قائمة الهاتف */
+        @media (max-width: 850px) {
+            .cards,
+            .aid-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .menu {
+                justify-content: center;
+                width: 100%;
+                background: #ffffff;
+                padding: 12px;
+                border: 1px solid #e5dff0;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            }
+
+            .menu a {
+                color: #654394 !important;
+                background: #ffffff !important;
+                font-weight: 600;
+            }
+
+            .menu a:hover {
+                color: #4d3275 !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cards,
+            .aid-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 0 60px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .article,
+            .about-box,
+            .card,
+            .aid-card,
+            .aid-intro {
+                padding: 22px;
+            }
+
+            .menu {
+                gap: 8px;
+                padding: 12px 8px;
+                background: #ffffff !important;
+            }
+
+            .menu a {
+                font-size: 14px;
+                color: #654394 !important;
+                background: #ffffff !important;
+                padding: 4px 6px;
+                border-radius: 5px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <a href="#top" class="logo">
+            KWAIK SAT | كويك ستلايت
+        </a>
+
+        <nav class="menu">
+            <a href="#services">الخدمات</a>
+            <a href="#guide">الدليل</a>
+            <a href="#aid-links">المساعدات الموثوقة</a>
+            <a href="#about">من نحن</a>
+            <a href="#faq">الأسئلة الشائعة</a>
+            <a href="#contact">اتصل بنا</a>
+            <a href="privacy.html">الخصوصية</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
 
     <div class="container hero-content">
 
         <div class="profile-image">
-            <img src="profile.jpg" alt="أبو كويك ساتلايت" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="profile-fallback">أ</span>
+            <img src="profile.jpg"
+                 alt="KWAIK SAT - كويك ستلايت"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <span class="profile-fallback">ك</span>
         </div>
 
-        <h1>أبو كويك ساتلايت</h1>
+        <h1>KWAIK SAT</h1>
 
-        <h2>Kawaik Satellite</h2>
+        <h2>كويك ستلايت</h2>
 
         <p>
             موقع متخصص في معلومات وخدمات الستلايت وأجهزة الاستقبال
@@ -516,7 +553,7 @@
 
         <div class="section-title">
 
-            <h2>خدمات أبو كويك ساتلايت</h2>
+            <h2>خدمات KWAIK SAT – كويك ستلايت</h2>
 
             <p>
                 مجالات مرتبطة بأنظمة الاستقبال والتلفزيون
@@ -757,7 +794,7 @@
 
         <div class="aid-notice">
             <strong>تنبيه مهم:</strong>
-            أبو كويك ساتلايت ليس مؤسسة إغاثية ولا يمثل أي منظمة أو جهة
+            KWAIK SAT – كويك ستلايت ليس مؤسسة إغاثية ولا يمثل أي منظمة أو جهة
             مانحة. الروابط التي ستتم إضافتها في هذا القسم ستكون روابط
             خارجية لمصادر رسمية، وينبغي دائمًا التأكد من شروط التسجيل
             والأهلية من الجهة نفسها.
@@ -808,10 +845,10 @@
 
         <div class="about-box">
 
-            <h3>أبو كويك ساتلايت – Kawaik Satellite</h3>
+            <h3>KWAIK SAT – كويك ستلايت</h3>
 
             <p>
-                أبو كويك ساتلايت هو موقع متخصص في مجال أنظمة استقبال
+                KWAIK SAT – كويك ستلايت هو موقع متخصص في مجال أنظمة استقبال
                 القنوات الفضائية والتلفزيون الرقمي والإلكترونيات
                 والشبكات.
             </p>
@@ -943,25 +980,31 @@
 
 </section>
 
-</main><footer><div class="container footer-content">
+</main>
 
-    <strong>أبو كويك ساتلايت – Kawaik Satellite</strong>
+<footer>
 
-    <div class="footer-links">
+    <div class="container footer-content">
 
-        <a href="about.html">من نحن</a>
-        <a href="contact.html">اتصل بنا</a>
-        <a href="privacy.html">سياسة الخصوصية</a>
-        <a href="terms.html">الشروط والأحكام</a>
-        <a href="#aid-links">المساعدات الرسمية والموثوقة</a>
+        <strong>KWAIK SAT – كويك ستلايت</strong>
+
+        <div class="footer-links">
+
+            <a href="about.html">من نحن</a>
+            <a href="contact.html">اتصل بنا</a>
+            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="terms.html">الشروط والأحكام</a>
+            <a href="#aid-links">المساعدات الرسمية والموثوقة</a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 KWAIK SAT - كويك ستلايت. جميع الحقوق محفوظة.
+        </div>
 
     </div>
 
-    <div class="copyright">
-        © 2026 Abu Kawaik Satellite - Kawaik Satellite. جميع الحقوق محفوظة.
-    </div>
+</footer>
 
-</div>
-
-</footer></body>
+</body>
 </html>
